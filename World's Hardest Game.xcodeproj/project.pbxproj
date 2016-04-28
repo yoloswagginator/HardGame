@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7B26FBC1CD2969B00959FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B26FBB1CD2969B00959FEB /* AppDelegate.swift */; };
+		D7B26FBE1CD2969B00959FEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B26FBD1CD2969B00959FEB /* ViewController.swift */; };
+		D7B26FC11CD2969B00959FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B26FBF1CD2969B00959FEB /* Main.storyboard */; };
+		D7B26FC31CD2969B00959FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B26FC21CD2969B00959FEB /* Assets.xcassets */; };
+		D7B26FC61CD2969B00959FEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B26FC41CD2969B00959FEB /* LaunchScreen.storyboard */; };
+		D7B26FD11CD2969B00959FEB /* World_s_Hardest_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B26FD01CD2969B00959FEB /* World_s_Hardest_GameTests.swift */; };
+		D7B26FDC1CD2969B00959FEB /* World_s_Hardest_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B26FDB1CD2969B00959FEB /* World_s_Hardest_GameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7B26FCD1CD2969B00959FEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7B26FB01CD2969B00959FEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7B26FB71CD2969B00959FEB;
+			remoteInfo = "World's Hardest Game";
+		};
+		D7B26FD81CD2969B00959FEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7B26FB01CD2969B00959FEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7B26FB71CD2969B00959FEB;
+			remoteInfo = "World's Hardest Game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D7B26FB81CD2969B00959FEB /* World's Hardest Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World's Hardest Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B26FBB1CD2969B00959FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7B26FBD1CD2969B00959FEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7B26FC01CD2969B00959FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7B26FC21CD2969B00959FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7B26FC51CD2969B00959FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7B26FC71CD2969B00959FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7B26FCC1CD2969B00959FEB /* World's Hardest GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World's Hardest GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B26FD01CD2969B00959FEB /* World_s_Hardest_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World_s_Hardest_GameTests.swift; sourceTree = "<group>"; };
+		D7B26FD21CD2969B00959FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7B26FD71CD2969B00959FEB /* World's Hardest GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World's Hardest GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B26FDB1CD2969B00959FEB /* World_s_Hardest_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World_s_Hardest_GameUITests.swift; sourceTree = "<group>"; };
+		D7B26FDD1CD2969B00959FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7B26FB51CD2969B00959FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B26FC91CD2969B00959FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B26FD41CD2969B00959FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7B26FAF1CD2969B00959FEB = {
+			isa = PBXGroup;
+			children = (
+				D7B26FBA1CD2969B00959FEB /* World's Hardest Game */,
+				D7B26FCF1CD2969B00959FEB /* World's Hardest GameTests */,
+				D7B26FDA1CD2969B00959FEB /* World's Hardest GameUITests */,
+				D7B26FB91CD2969B00959FEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7B26FB91CD2969B00959FEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7B26FB81CD2969B00959FEB /* World's Hardest Game.app */,
+				D7B26FCC1CD2969B00959FEB /* World's Hardest GameTests.xctest */,
+				D7B26FD71CD2969B00959FEB /* World's Hardest GameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7B26FBA1CD2969B00959FEB /* World's Hardest Game */ = {
+			isa = PBXGroup;
+			children = (
+				D7B26FBB1CD2969B00959FEB /* AppDelegate.swift */,
+				D7B26FBD1CD2969B00959FEB /* ViewController.swift */,
+				D7B26FBF1CD2969B00959FEB /* Main.storyboard */,
+				D7B26FC21CD2969B00959FEB /* Assets.xcassets */,
+				D7B26FC41CD2969B00959FEB /* LaunchScreen.storyboard */,
+				D7B26FC71CD2969B00959FEB /* Info.plist */,
+			);
+			path = "World's Hardest Game";
+			sourceTree = "<group>";
+		};
+		D7B26FCF1CD2969B00959FEB /* World's Hardest GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7B26FD01CD2969B00959FEB /* World_s_Hardest_GameTests.swift */,
+				D7B26FD21CD2969B00959FEB /* Info.plist */,
+			);
+			path = "World's Hardest GameTests";
+			sourceTree = "<group>";
+		};
+		D7B26FDA1CD2969B00959FEB /* World's Hardest GameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7B26FDB1CD2969B00959FEB /* World_s_Hardest_GameUITests.swift */,
+				D7B26FDD1CD2969B00959FEB /* Info.plist */,
+			);
+			path = "World's Hardest GameUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7B26FB71CD2969B00959FEB /* World's Hardest Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7B26FE01CD2969B00959FEB /* Build configuration list for PBXNativeTarget "World's Hardest Game" */;
+			buildPhases = (
+				D7B26FB41CD2969B00959FEB /* Sources */,
+				D7B26FB51CD2969B00959FEB /* Frameworks */,
+				D7B26FB61CD2969B00959FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "World's Hardest Game";
+			productName = "World's Hardest Game";
+			productReference = D7B26FB81CD2969B00959FEB /* World's Hardest Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7B26FCB1CD2969B00959FEB /* World's Hardest GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7B26FE31CD2969B00959FEB /* Build configuration list for PBXNativeTarget "World's Hardest GameTests" */;
+			buildPhases = (
+				D7B26FC81CD2969B00959FEB /* Sources */,
+				D7B26FC91CD2969B00959FEB /* Frameworks */,
+				D7B26FCA1CD2969B00959FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7B26FCE1CD2969B00959FEB /* PBXTargetDependency */,
+			);
+			name = "World's Hardest GameTests";
+			productName = "World's Hardest GameTests";
+			productReference = D7B26FCC1CD2969B00959FEB /* World's Hardest GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7B26FD61CD2969B00959FEB /* World's Hardest GameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7B26FE61CD2969B00959FEB /* Build configuration list for PBXNativeTarget "World's Hardest GameUITests" */;
+			buildPhases = (
+				D7B26FD31CD2969B00959FEB /* Sources */,
+				D7B26FD41CD2969B00959FEB /* Frameworks */,
+				D7B26FD51CD2969B00959FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7B26FD91CD2969B00959FEB /* PBXTargetDependency */,
+			);
+			name = "World's Hardest GameUITests";
+			productName = "World's Hardest GameUITests";
+			productReference = D7B26FD71CD2969B00959FEB /* World's Hardest GameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7B26FB01CD2969B00959FEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = JohnHerseyHighSchool;
+				TargetAttributes = {
+					D7B26FB71CD2969B00959FEB = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D7B26FCB1CD2969B00959FEB = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D7B26FB71CD2969B00959FEB;
+					};
+					D7B26FD61CD2969B00959FEB = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D7B26FB71CD2969B00959FEB;
+					};
+				};
+			};
+			buildConfigurationList = D7B26FB31CD2969B00959FEB /* Build configuration list for PBXProject "World's Hardest Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7B26FAF1CD2969B00959FEB;
+			productRefGroup = D7B26FB91CD2969B00959FEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7B26FB71CD2969B00959FEB /* World's Hardest Game */,
+				D7B26FCB1CD2969B00959FEB /* World's Hardest GameTests */,
+				D7B26FD61CD2969B00959FEB /* World's Hardest GameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7B26FB61CD2969B00959FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7B26FC61CD2969B00959FEB /* LaunchScreen.storyboard in Resources */,
+				D7B26FC31CD2969B00959FEB /* Assets.xcassets in Resources */,
+				D7B26FC11CD2969B00959FEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B26FCA1CD2969B00959FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B26FD51CD2969B00959FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7B26FB41CD2969B00959FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7B26FBE1CD2969B00959FEB /* ViewController.swift in Sources */,
+				D7B26FBC1CD2969B00959FEB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B26FC81CD2969B00959FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7B26FD11CD2969B00959FEB /* World_s_Hardest_GameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B26FD31CD2969B00959FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7B26FDC1CD2969B00959FEB /* World_s_Hardest_GameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7B26FCE1CD2969B00959FEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7B26FB71CD2969B00959FEB /* World's Hardest Game */;
+			targetProxy = D7B26FCD1CD2969B00959FEB /* PBXContainerItemProxy */;
+		};
+		D7B26FD91CD2969B00959FEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7B26FB71CD2969B00959FEB /* World's Hardest Game */;
+			targetProxy = D7B26FD81CD2969B00959FEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7B26FBF1CD2969B00959FEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7B26FC01CD2969B00959FEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7B26FC41CD2969B00959FEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7B26FC51CD2969B00959FEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7B26FDE1CD2969B00959FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7B26FDF1CD2969B00959FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7B26FE11CD2969B00959FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "World's Hardest Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JHHS.World-s-Hardest-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D7B26FE21CD2969B00959FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "World's Hardest Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JHHS.World-s-Hardest-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D7B26FE41CD2969B00959FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "World's Hardest GameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JHHS.World-s-Hardest-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/World's Hardest Game.app/World's Hardest Game";
+			};
+			name = Debug;
+		};
+		D7B26FE51CD2969B00959FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "World's Hardest GameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JHHS.World-s-Hardest-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/World's Hardest Game.app/World's Hardest Game";
+			};
+			name = Release;
+		};
+		D7B26FE71CD2969B00959FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "World's Hardest GameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JHHS.World-s-Hardest-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "World's Hardest Game";
+			};
+			name = Debug;
+		};
+		D7B26FE81CD2969B00959FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "World's Hardest GameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JHHS.World-s-Hardest-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "World's Hardest Game";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7B26FB31CD2969B00959FEB /* Build configuration list for PBXProject "World's Hardest Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7B26FDE1CD2969B00959FEB /* Debug */,
+				D7B26FDF1CD2969B00959FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7B26FE01CD2969B00959FEB /* Build configuration list for PBXNativeTarget "World's Hardest Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7B26FE11CD2969B00959FEB /* Debug */,
+				D7B26FE21CD2969B00959FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D7B26FE31CD2969B00959FEB /* Build configuration list for PBXNativeTarget "World's Hardest GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7B26FE41CD2969B00959FEB /* Debug */,
+				D7B26FE51CD2969B00959FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D7B26FE61CD2969B00959FEB /* Build configuration list for PBXNativeTarget "World's Hardest GameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7B26FE71CD2969B00959FEB /* Debug */,
+				D7B26FE81CD2969B00959FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7B26FB01CD2969B00959FEB /* Project object */;
+}
