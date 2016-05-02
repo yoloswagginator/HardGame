@@ -1,4 +1,4 @@
-//
+//  Lukas Wilke, Timmy Somary, lshuck
 //  ViewController.swift
 //  World's Hardest Game
 //
