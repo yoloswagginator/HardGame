@@ -15,15 +15,8 @@ class firstLevelViewController: UIViewController {
     @IBOutlet weak var endPlatform: UIImageView!
     @IBOutlet weak var playBall: UIView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
        
     }
-
-    
-   
-
-    
 }
