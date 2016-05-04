@@ -67,6 +67,34 @@
                                 <rect key="frame" x="62" y="372" width="25" height="24"/>
                                 <color key="backgroundColor" red="0.19890764134515415" green="1" blue="0.23478125494468349" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eti-Ie-Bxa">
+                                <rect key="frame" x="863" y="683" width="62" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Down">
+                                    <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrR-bN-l84">
+                                <rect key="frame" x="793" y="683" width="62" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Left">
+                                    <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGN-80-bXs">
+                                <rect key="frame" x="933" y="683" width="62" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Right">
+                                    <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyy-mL-1Bx">
+                                <rect key="frame" x="863" y="633" width="62" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Up">
+                                    <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9287709197808095" green="0.81564884267926452" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -77,9 +105,15 @@
                         <outlet property="mainPlatform" destination="D3h-9R-Q3b" id="gBd-Ys-hEZ"/>
                         <outlet property="playBall" destination="eYg-Oi-Apg" id="6oF-XM-ze5"/>
                         <outlet property="startPlatform" destination="unu-of-UJq" id="KGi-4d-gJp"/>
+                        <outlet property="upButton" destination="Kyy-mL-1Bx" id="GR2-SV-iXB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Uy-0q-qLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="hGa-wx-iZs">
+                    <connections>
+                        <action selector="movementButtons:" destination="CAZ-Fk-BtM" id="7vU-NW-LTh"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1478" y="349"/>
         </scene>

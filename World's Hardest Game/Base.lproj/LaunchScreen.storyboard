@@ -17,6 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="mZs-mx-bcr" secondAttribute="bottom" id="4tz-RH-Cju"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="anZ-2Q-QWb" secondAttribute="bottom" constant="-12" id="64W-9A-WG9"/>
+                            <constraint firstItem="mZs-mx-bcr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="NWK-LI-A4n"/>
+                            <constraint firstItem="anZ-2Q-QWb" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="537" id="RrS-Sk-GrW"/>
+                            <constraint firstItem="mZs-mx-bcr" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="Udg-Aj-2VR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mZs-mx-bcr" secondAttribute="trailing" constant="-20" id="qJM-Tv-5RH"/>
+                            <constraint firstItem="anZ-2Q-QWb" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="r47-O5-qAR"/>
+                            <constraint firstItem="anZ-2Q-QWb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="tVe-CY-pm0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +34,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch screen" width="292" height="242"/>
+    </resources>
 </document>
