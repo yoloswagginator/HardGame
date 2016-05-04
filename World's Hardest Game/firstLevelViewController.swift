@@ -37,23 +37,16 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         collisionBehavior.collisionMode = .Everything
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
+        
 
         
     }
     
-    @IBAction func movementButtons(sender: UILongPressGestureRecognizer) {
         
-        let point = sender.locationInView(view)
-        
-        if CGRectContainsPoint(upButton.frame, point) {
-            let pushBehavior = UIPushBehavior()
-            pushBehavior.magnitude = 1.0
-            pushBehavior.pushDirection = CGVectorMake(0, 5)
-            dynamicAnimator.addBehavior(pushBehavior)
-        }
         
     }
+    
    
 
     
-}
+
