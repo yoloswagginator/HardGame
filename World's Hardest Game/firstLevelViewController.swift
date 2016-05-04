@@ -15,6 +15,11 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var endPlatform: UIImageView!
     @IBOutlet weak var playBall: UIView!
     @IBOutlet weak var upButton: UIButton!
+    @IBOutlet weak var blueBlock1: UIView!
+    @IBOutlet weak var blueBlock2: UIView!
+    @IBOutlet weak var blueBlock3: UIView!
+    @IBOutlet weak var blueBlock4: UIView!
+    @IBOutlet weak var blueBlock5: UIView!
     
     let dynamicAnimator = UIDynamicAnimator()
     
