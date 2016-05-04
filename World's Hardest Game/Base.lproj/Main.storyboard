@@ -95,12 +95,37 @@
                                     <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f36-Po-UMG">
+                                <rect key="frame" x="242" y="369" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NR6-ak-Lfj">
+                                <rect key="frame" x="372" y="369" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u53-dV-wcQ">
+                                <rect key="frame" x="497" y="369" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-Vy-JAq">
+                                <rect key="frame" x="753" y="369" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58c-EI-ZlN">
+                                <rect key="frame" x="626" y="369" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.9287709197808095" green="0.81564884267926452" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="blueBlock1" destination="f36-Po-UMG" id="8Qh-gT-bvT"/>
+                        <outlet property="blueBlock2" destination="NR6-ak-Lfj" id="Ral-Go-nXx"/>
+                        <outlet property="blueBlock3" destination="u53-dV-wcQ" id="Yk6-6e-JIg"/>
+                        <outlet property="blueBlock4" destination="58c-EI-ZlN" id="NEX-Th-P7m"/>
+                        <outlet property="blueBlock5" destination="blQ-Vy-JAq" id="IYX-yk-MUF"/>
                         <outlet property="endPlatform" destination="tTb-X0-NF8" id="vLk-d3-WWm"/>
                         <outlet property="mainPlatform" destination="D3h-9R-Q3b" id="gBd-Ys-hEZ"/>
                         <outlet property="playBall" destination="eYg-Oi-Apg" id="6oF-XM-ze5"/>
