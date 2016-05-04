@@ -51,10 +51,11 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         let point = sender.locationInView(view)
         
         if CGRectContainsPoint(upButton.frame, point) {
-            let pushBehavior = UIPushBehavior()
+            let pushBehavior = UIPushBehavior(items: [playBall], mode: .Instantaneous)
             pushBehavior.magnitude = 1.0
             pushBehavior.pushDirection = CGVectorMake(0, 5)
             dynamicAnimator.addBehavior(pushBehavior)
+            dynamicAnimator
         }
         
     }
