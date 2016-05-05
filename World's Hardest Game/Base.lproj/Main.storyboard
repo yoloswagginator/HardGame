@@ -75,7 +75,7 @@
                                     <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="vsf-zE-Adg" appends="YES" id="qiQ-fZ-RQI"/>
+                                    <action selector="downButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="e6F-7M-Mnh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrR-bN-l84">
@@ -86,7 +86,7 @@
                                     <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="PDE-jt-6dF" appends="YES" id="LWc-s1-R6z"/>
+                                    <action selector="leftButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="TQj-4f-wLm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGN-80-bXs">
@@ -97,7 +97,7 @@
                                     <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="xJd-qt-Zin" appends="YES" id="G4k-6G-hPm"/>
+                                    <action selector="rightButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="J3j-f8-piy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyy-mL-1Bx">
@@ -108,7 +108,7 @@
                                     <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="3Fp-4g-keb" appends="YES" id="ZB2-mF-S9t"/>
+                                    <action selector="upButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="r8v-fg-B9v"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f36-Po-UMG">
@@ -150,37 +150,13 @@
                         <outlet property="blueBlock3" destination="u53-dV-wcQ" id="Yk6-6e-JIg"/>
                         <outlet property="blueBlock4" destination="58c-EI-ZlN" id="NEX-Th-P7m"/>
                         <outlet property="blueBlock5" destination="blQ-Vy-JAq" id="IYX-yk-MUF"/>
-                        <outlet property="downButton" destination="eti-Ie-Bxa" id="RTB-1R-XNS"/>
                         <outlet property="endPlatform" destination="tTb-X0-NF8" id="vLk-d3-WWm"/>
-                        <outlet property="leftButton" destination="qrR-bN-l84" id="PKU-Km-oVt"/>
                         <outlet property="mainPlatform" destination="D3h-9R-Q3b" id="gBd-Ys-hEZ"/>
                         <outlet property="playBall" destination="eYg-Oi-Apg" id="6oF-XM-ze5"/>
-                        <outlet property="rightButton" destination="dGN-80-bXs" id="Sn5-wv-Ow3"/>
                         <outlet property="startPlatform" destination="unu-of-UJq" id="KGi-4d-gJp"/>
-                        <outlet property="upButton" destination="Kyy-mL-1Bx" id="GR2-SV-iXB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Uy-0q-qLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="3Fp-4g-keb">
-                    <connections>
-                        <action selector="upButtonPressed:" destination="CAZ-Fk-BtM" id="y1F-gS-fAH"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="PDE-jt-6dF">
-                    <connections>
-                        <action selector="leftButtonPressed:" destination="CAZ-Fk-BtM" id="hs6-8M-Yb9"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="vsf-zE-Adg">
-                    <connections>
-                        <action selector="downButtonPressed:" destination="CAZ-Fk-BtM" id="6FN-Rc-z5G"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xJd-qt-Zin">
-                    <connections>
-                        <action selector="rightButtonPressed:" destination="CAZ-Fk-BtM" id="54C-mO-Tp5"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1478" y="349"/>
         </scene>
