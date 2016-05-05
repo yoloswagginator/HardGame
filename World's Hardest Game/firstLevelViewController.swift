@@ -20,7 +20,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var blueBlock4: UIView!
     @IBOutlet weak var blueBlock5: UIView!
    
-    
+    var pushBehaviorUno = UIPushBehavior()
     let dynamicAnimator = UIDynamicAnimator()
     
     override func viewDidLoad() {
@@ -49,12 +49,17 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     @IBAction func upButton(sender: UIButton) {
         
-        let pushBehavior = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-        pushBehavior.magnitude = 1.0
-        pushBehavior.pushDirection = CGVectorMake(0, -0.1)
-        dynamicAnimator.addBehavior(pushBehavior)
+        let pushBehavior1 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior1.magnitude = 1.0
+        pushBehavior1.pushDirection = CGVectorMake(0, -0.1)
+        dynamicAnimator.addBehavior(pushBehavior1)
+        self.pushBehaviorUno = pushBehavior1
         
 
+    }
+    
+    @IBAction func upEnd(sender: UIButton) {
+        dynamicAnimator.removeBehavior(pushBehaviorUno)
     }
     
     @IBAction func leftButton(sender: UIButton) {

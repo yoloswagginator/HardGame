@@ -109,6 +109,7 @@
                                 </state>
                                 <connections>
                                     <action selector="upButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="r8v-fg-B9v"/>
+                                    <action selector="upEnd:" destination="CAZ-Fk-BtM" eventType="primaryActionTriggered" id="4ro-rd-ed7"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f36-Po-UMG">
