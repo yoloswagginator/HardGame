@@ -19,6 +19,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var blueBlock3: UIView!
     @IBOutlet weak var blueBlock4: UIView!
     @IBOutlet weak var blueBlock5: UIView!
+    @IBOutlet weak var yellowBlock1: UIView!
+    @IBOutlet weak var yellowBlock2: UIView!
    
     var pushBehaviorUno = UIPushBehavior()
     var pushBehaviorDos = UIPushBehavior()
