@@ -57,6 +57,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         pushBehavior1.pushDirection = CGVectorMake(0, -0.1)
         dynamicAnimator.addBehavior(pushBehavior1)
         self.pushBehaviorUno = pushBehavior1
+        print("start")
         
 
     }
@@ -106,7 +107,9 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     @IBAction func rightEnd(sender: UIButton) {
         dynamicAnimator.removeBehavior(pushBehaviorCuatro)
+        print("end")
     }
+    
       }
     
    
