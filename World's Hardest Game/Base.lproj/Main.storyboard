@@ -76,6 +76,7 @@
                                 </state>
                                 <connections>
                                     <action selector="downButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="e6F-7M-Mnh"/>
+                                    <action selector="downEnd:" destination="CAZ-Fk-BtM" eventType="primaryActionTriggered" id="N99-jf-HwO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrR-bN-l84">
@@ -87,6 +88,7 @@
                                 </state>
                                 <connections>
                                     <action selector="leftButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="TQj-4f-wLm"/>
+                                    <action selector="leftEnd:" destination="CAZ-Fk-BtM" eventType="primaryActionTriggered" id="Eaf-TT-OI0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGN-80-bXs">
@@ -98,6 +100,7 @@
                                 </state>
                                 <connections>
                                     <action selector="rightButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="J3j-f8-piy"/>
+                                    <action selector="rightEnd:" destination="CAZ-Fk-BtM" eventType="primaryActionTriggered" id="jSl-8U-eZ2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyy-mL-1Bx">

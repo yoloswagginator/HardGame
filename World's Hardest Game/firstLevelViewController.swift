@@ -21,6 +21,9 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var blueBlock5: UIView!
    
     var pushBehaviorUno = UIPushBehavior()
+    var pushBehaviorDos = UIPushBehavior()
+    var pushBehaviorTres = UIPushBehavior()
+    var pushBehaviorCuatro = UIPushBehavior()
     let dynamicAnimator = UIDynamicAnimator()
     
     override func viewDidLoad() {
@@ -64,32 +67,46 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     @IBAction func leftButton(sender: UIButton) {
         
-        let pushBehavior = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-        pushBehavior.magnitude = 1.0
-        pushBehavior.pushDirection = CGVectorMake(-0.1, -0)
-        dynamicAnimator.addBehavior(pushBehavior)
+        let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior2.magnitude = 1.0
+        pushBehavior2.pushDirection = CGVectorMake(-0.1, -0)
+        dynamicAnimator.addBehavior(pushBehavior2)
+        self.pushBehaviorDos = pushBehavior2
 
+    }
+    
+    @IBAction func leftEnd(sender: UIButton) {
+        dynamicAnimator.removeBehavior(pushBehaviorDos)
     }
     
     @IBAction func downButton(sender: UIButton) {
         
-        let pushBehavior = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-        pushBehavior.magnitude = 1.0
-        pushBehavior.pushDirection = CGVectorMake(0, 0.1)
-        dynamicAnimator.addBehavior(pushBehavior)
+        let pushBehavior3 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior3.magnitude = 1.0
+        pushBehavior3.pushDirection = CGVectorMake(0, 0.1)
+        dynamicAnimator.addBehavior(pushBehavior3)
+        self.pushBehaviorTres = pushBehavior3
 
+    }
+    
+    @IBAction func downEnd(sender: UIButton) {
+        dynamicAnimator.removeBehavior(pushBehaviorTres)
     }
     
     @IBAction func rightButton(sender: UIButton) {
         
-        let pushBehavior = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-        pushBehavior.magnitude = 1.0
-        pushBehavior.pushDirection = CGVectorMake(0.1, 0)
-        dynamicAnimator.addBehavior(pushBehavior)
+        let pushBehavior4 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior4.magnitude = 1.0
+        pushBehavior4.pushDirection = CGVectorMake(0.1, 0)
+        dynamicAnimator.addBehavior(pushBehavior4)
+        self.pushBehaviorCuatro = pushBehavior4
 
         
     }
     
+    @IBAction func rightEnd(sender: UIButton) {
+        dynamicAnimator.removeBehavior(pushBehaviorCuatro)
+    }
       }
     
    
