@@ -68,7 +68,7 @@
                                 <color key="backgroundColor" red="0.19890764134515415" green="1" blue="0.23478125494468349" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eti-Ie-Bxa">
-                                <rect key="frame" x="863" y="683" width="62" height="42"/>
+                                <rect key="frame" x="611" y="605" width="158" height="114"/>
                                 <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Down">
@@ -80,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrR-bN-l84">
-                                <rect key="frame" x="793" y="683" width="62" height="42"/>
+                                <rect key="frame" x="237" y="605" width="158" height="115"/>
                                 <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Left">
@@ -91,20 +91,8 @@
                                     <action selector="leftEnd:" destination="CAZ-Fk-BtM" eventType="primaryActionTriggered" id="Eaf-TT-OI0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGN-80-bXs">
-                                <rect key="frame" x="933" y="683" width="62" height="42"/>
-                                <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <state key="normal" title="Right">
-                                    <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="rightButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="J3j-f8-piy"/>
-                                    <action selector="rightEnd:" destination="CAZ-Fk-BtM" eventType="primaryActionTriggered" id="jSl-8U-eZ2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyy-mL-1Bx">
-                                <rect key="frame" x="863" y="633" width="62" height="42"/>
+                                <rect key="frame" x="416" y="605" width="171" height="114"/>
                                 <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Up">
@@ -143,6 +131,18 @@
                                 <rect key="frame" x="505" y="243" width="15" height="15"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGN-80-bXs">
+                                <rect key="frame" x="796" y="604" width="149" height="115"/>
+                                <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Right">
+                                    <color key="titleShadowColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButton:" destination="CAZ-Fk-BtM" eventType="touchDown" id="J3j-f8-piy"/>
+                                    <action selector="rightEnd:" destination="CAZ-Fk-BtM" eventType="primaryActionTriggered" id="jSl-8U-eZ2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9287709197808095" green="0.81564884267926452" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
