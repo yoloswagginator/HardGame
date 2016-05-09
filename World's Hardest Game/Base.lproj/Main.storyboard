@@ -158,6 +158,8 @@
                         <outlet property="mainPlatform" destination="D3h-9R-Q3b" id="gBd-Ys-hEZ"/>
                         <outlet property="playBall" destination="eYg-Oi-Apg" id="6oF-XM-ze5"/>
                         <outlet property="startPlatform" destination="unu-of-UJq" id="KGi-4d-gJp"/>
+                        <outlet property="yellowBlock1" destination="hbC-Q5-wPo" id="LNK-LV-doe"/>
+                        <outlet property="yellowBlock2" destination="SSl-Fl-fLz" id="scv-7b-9aP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Uy-0q-qLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
