@@ -21,6 +21,18 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var blueBlock5: UIView!
     @IBOutlet weak var yellowBlock1: UIView!
     @IBOutlet weak var yellowBlock2: UIView!
+    @IBOutlet weak var boundaryOne: UIView!
+    @IBOutlet weak var boundaryTwo: UIView!
+    @IBOutlet weak var boundaryThree: UIView!
+    @IBOutlet weak var boundaryFour: UIView!
+    @IBOutlet weak var boundaryFive: UIView!
+    @IBOutlet weak var boundarySix: UIView!
+    @IBOutlet weak var boundarySeven: UIView!
+    @IBOutlet weak var boundaryEight: UIView!
+    @IBOutlet weak var boundaryNine: UIView!
+    @IBOutlet weak var boundaryTen: UIView!
+    @IBOutlet weak var boundaryEleven: UIView!
+    @IBOutlet weak var boundaryTwelve: UIView!
    
     var pushBehaviorUno = UIPushBehavior()
     var pushBehaviorDos = UIPushBehavior()
@@ -30,11 +42,15 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dynamicActions()
+        
+        dynamicActions()
         
     }
+    
 
     func dynamicActions() {
-        let dynamicItemBehavior = UIDynamicItemBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, playBall])
+        let dynamicItemBehavior = UIDynamicItemBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
         dynamicItemBehavior.density = 1.0
         dynamicItemBehavior.friction = 0.0
         dynamicItemBehavior.resistance = 0.0
@@ -42,7 +58,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicItemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehavior)
         
-        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [playBall])
+        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
         dynamicItemBehavior.density = 1000000.0
         dynamicItemBehavior.friction = 0.0
         dynamicItemBehavior.resistance = 0.0
@@ -56,6 +72,16 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
         
+        let pushBehavior5 = UIPushBehavior(items: [blueBlock1,blueBlock3,blueBlock5], mode: .Instantaneous)
+        pushBehavior5.magnitude = 1.0
+        pushBehavior5.pushDirection = CGVectorMake(0, 0.1)
+        dynamicAnimator.addBehavior(pushBehavior5)
+
+        let pushBehavior6 = UIPushBehavior(items: [blueBlock2,blueBlock4], mode: .Instantaneous)
+        pushBehavior6.magnitude = 1.0
+        pushBehavior6.pushDirection = CGVectorMake(0, -0.1)
+        dynamicAnimator.addBehavior(pushBehavior6)
+
         
 
         
@@ -81,7 +107,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
         pushBehavior2.magnitude = 1.0
-        pushBehavior2.pushDirection = CGVectorMake(-0.1, -0)
+        pushBehavior2.pushDirection = CGVectorMake(-0.1, 0)
         dynamicAnimator.addBehavior(pushBehavior2)
         self.pushBehaviorDos = pushBehavior2
 
