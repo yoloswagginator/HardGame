@@ -30,7 +30,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       dynamicActions([blueBlock1,blueBlock2,blueBlock3,blueBlock4,blueBlock5])
+        dynamicActions()
+        
     }
     
 
@@ -43,13 +44,13 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicItemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehavior)
         
-        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [playBall])
-        dynamicItemBehavior.density = 1000000.0
-        dynamicItemBehavior.friction = 0.0
-        dynamicItemBehavior.resistance = 0.0
-        dynamicItemBehavior.elasticity = 1.0
-        dynamicItemBehavior.allowsRotation = false
-        dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
+//        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [playBall])
+//        dynamicItemBehavior.density = 1000000.0
+//        dynamicItemBehavior.friction = 0.0
+//        dynamicItemBehavior.resistance = 0.0
+//        dynamicItemBehavior.elasticity = 1.0
+//        dynamicItemBehavior.allowsRotation = false
+//        dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
         
         let collisionBehavior = UICollisionBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
@@ -57,10 +58,15 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
         
-        let pushBehavior5 = UIPushBehavior(items: array, mode: .Instantaneous)
+        let pushBehavior5 = UIPushBehavior(items: [blueBlock1,blueBlock3,blueBlock5], mode: .Instantaneous)
         pushBehavior5.magnitude = 1.0
         pushBehavior5.pushDirection = CGVectorMake(0, 0.1)
         dynamicAnimator.addBehavior(pushBehavior5)
+
+        let pushBehavior6 = UIPushBehavior(items: [blueBlock2,blueBlock4], mode: .Instantaneous)
+        pushBehavior6.magnitude = 1.0
+        pushBehavior6.pushDirection = CGVectorMake(0, -0.1)
+        dynamicAnimator.addBehavior(pushBehavior6)
 
         
 
@@ -87,7 +93,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
         pushBehavior2.magnitude = 1.0
-        pushBehavior2.pushDirection = CGVectorMake(-0.1, -0)
+        pushBehavior2.pushDirection = CGVectorMake(-0.1, 0)
         dynamicAnimator.addBehavior(pushBehavior2)
         self.pushBehaviorDos = pushBehavior2
 
