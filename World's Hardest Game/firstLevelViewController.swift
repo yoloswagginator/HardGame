@@ -34,8 +34,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     }
     
 
-    func dynamicActions(array: [UIView]) {
-        let dynamicItemBehavior = UIDynamicItemBehavior(items: array)
+    func dynamicActions() {
+        let dynamicItemBehavior = UIDynamicItemBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, playBall])
         dynamicItemBehavior.density = 1.0
         dynamicItemBehavior.friction = 0.0
         dynamicItemBehavior.resistance = 0.0
@@ -43,7 +43,15 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicItemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehavior)
         
-        let collisionBehavior = UICollisionBehavior(items: array)
+        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [playBall])
+        dynamicItemBehavior.density = 1000000.0
+        dynamicItemBehavior.friction = 0.0
+        dynamicItemBehavior.resistance = 0.0
+        dynamicItemBehavior.elasticity = 1.0
+        dynamicItemBehavior.allowsRotation = false
+        dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
+        
+        let collisionBehavior = UICollisionBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         collisionBehavior.collisionMode = .Everything
         collisionBehavior.collisionDelegate = self
