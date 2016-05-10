@@ -30,8 +30,9 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       dynamicActions([blueBlock1,blueBlock2,blueBlock3,blueBlock4,blueBlock5])
     }
+    
 
     func dynamicActions(array: [UIView]) {
         let dynamicItemBehavior = UIDynamicItemBehavior(items: array)
@@ -47,6 +48,12 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         collisionBehavior.collisionMode = .Everything
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
+        
+        let pushBehavior5 = UIPushBehavior(items: array, mode: .Instantaneous)
+        pushBehavior5.magnitude = 1.0
+        pushBehavior5.pushDirection = CGVectorMake(0, 0.1)
+        dynamicAnimator.addBehavior(pushBehavior5)
+
         
 
         
