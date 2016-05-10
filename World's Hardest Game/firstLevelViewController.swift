@@ -21,6 +21,18 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var blueBlock5: UIView!
     @IBOutlet weak var yellowBlock1: UIView!
     @IBOutlet weak var yellowBlock2: UIView!
+    @IBOutlet weak var boundaryOne: UIView!
+    @IBOutlet weak var boundaryTwo: UIView!
+    @IBOutlet weak var boundaryThree: UIView!
+    @IBOutlet weak var boundaryFour: UIView!
+    @IBOutlet weak var boundaryFive: UIView!
+    @IBOutlet weak var boundarySix: UIView!
+    @IBOutlet weak var boundarySeven: UIView!
+    @IBOutlet weak var boundaryEight: UIView!
+    @IBOutlet weak var boundaryNine: UIView!
+    @IBOutlet weak var boundaryTen: UIView!
+    @IBOutlet weak var boundaryEleven: UIView!
+    @IBOutlet weak var boundaryTwelve: UIView!
    
     var pushBehaviorUno = UIPushBehavior()
     var pushBehaviorDos = UIPushBehavior()
@@ -31,10 +43,12 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dynamicActions()
+        
     }
 
     func dynamicActions() {
-        let dynamicItemBehavior = UIDynamicItemBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, playBall])
+        let dynamicItemBehavior = UIDynamicItemBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
         dynamicItemBehavior.density = 1.0
         dynamicItemBehavior.friction = 0.0
         dynamicItemBehavior.resistance = 0.0
@@ -42,7 +56,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicItemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehavior)
         
-        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [playBall])
+        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
         dynamicItemBehavior.density = 1000000.0
         dynamicItemBehavior.friction = 0.0
         dynamicItemBehavior.resistance = 0.0
