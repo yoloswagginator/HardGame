@@ -69,14 +69,14 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicItemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehavior)
         
-//        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
-//        dynamicItemBehaviorTwo.density = 1000000.0
-//        dynamicItemBehaviorTwo.friction = 0.0
-//        dynamicItemBehaviorTwo.resistance = 0.0
-//        dynamicItemBehaviorTwo.elasticity = 1.0
-//        dynamicItemBehaviorTwo.allowsRotation = false
-//        dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
-//        
+        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [playBall])
+        dynamicItemBehaviorTwo.density = 1
+        dynamicItemBehaviorTwo.friction = 0.0
+        dynamicItemBehaviorTwo.resistance = 0.0
+        dynamicItemBehaviorTwo.elasticity = 0
+        dynamicItemBehaviorTwo.allowsRotation = false
+        dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
+
         let collisionBehavior = UICollisionBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, playBall])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         for boundary in boundaryArray {
