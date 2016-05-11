@@ -39,10 +39,24 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     var pushBehaviorTres = UIPushBehavior()
     var pushBehaviorCuatro = UIPushBehavior()
     let dynamicAnimator = UIDynamicAnimator()
+    var boundaryArray = [UIView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        boundaryArray.append(boundaryOne)
+        boundaryArray.append(boundaryTwo)
+        boundaryArray.append(boundaryThree)
+        boundaryArray.append(boundaryFour)
+        boundaryArray.append(boundaryFive)
+        boundaryArray.append(boundarySix)
+        boundaryArray.append(boundarySeven)
+        boundaryArray.append(boundaryEight)
+        boundaryArray.append(boundaryNine)
+        boundaryArray.append(boundaryTen)
+        boundaryArray.append(boundaryEleven)
+        boundaryArray.append(boundaryTwelve)
         dynamicActions()
+        
     }
     
 
@@ -55,19 +69,22 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicItemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehavior)
         
-        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
-        dynamicItemBehaviorTwo.density = 1000000.0
-        dynamicItemBehaviorTwo.friction = 0.0
-        dynamicItemBehaviorTwo.resistance = 0.0
-        dynamicItemBehaviorTwo.elasticity = 1.0
-        dynamicItemBehaviorTwo.allowsRotation = false
-        dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
-        
-        let collisionBehavior = UICollisionBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5,boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve,playBall])
+//        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
+//        dynamicItemBehaviorTwo.density = 1000000.0
+//        dynamicItemBehaviorTwo.friction = 0.0
+//        dynamicItemBehaviorTwo.resistance = 0.0
+//        dynamicItemBehaviorTwo.elasticity = 1.0
+//        dynamicItemBehaviorTwo.allowsRotation = false
+//        dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
+//        
+        let collisionBehavior = UICollisionBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, playBall])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
+        for boundary in boundaryArray {
+        collisionBehavior.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
         collisionBehavior.collisionMode = .Everything
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
+        }
         
         let pushBehavior5 = UIPushBehavior(items: [blueBlock1,blueBlock3,blueBlock5], mode: .Instantaneous)
         pushBehavior5.magnitude = 1.0
