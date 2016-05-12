@@ -42,7 +42,6 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dynamicActions()
         
         dynamicActions()
         
@@ -50,7 +49,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
 
     func dynamicActions() {
-        let dynamicItemBehavior = UIDynamicItemBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
+        let dynamicItemBehavior = UIDynamicItemBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, playBall])
         dynamicItemBehavior.density = 1.0
         dynamicItemBehavior.friction = 0.0
         dynamicItemBehavior.resistance = 0.0
@@ -59,14 +58,14 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(dynamicItemBehavior)
         
         let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
-        dynamicItemBehavior.density = 1000000.0
-        dynamicItemBehavior.friction = 0.0
-        dynamicItemBehavior.resistance = 0.0
-        dynamicItemBehavior.elasticity = 1.0
-        dynamicItemBehavior.allowsRotation = false
+        dynamicItemBehaviorTwo.density = 1000000.0
+        dynamicItemBehaviorTwo.friction = 0.0
+        dynamicItemBehaviorTwo.resistance = 0.0
+        dynamicItemBehaviorTwo.elasticity = 1.0
+        dynamicItemBehaviorTwo.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
         
-        let collisionBehavior = UICollisionBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
+        let collisionBehavior = UICollisionBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, playBall])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         collisionBehavior.collisionMode = .Everything
         collisionBehavior.collisionDelegate = self
