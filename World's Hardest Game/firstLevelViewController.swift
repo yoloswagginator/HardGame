@@ -39,6 +39,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     var pushBehaviorTres = UIPushBehavior()
     var pushBehaviorCuatro = UIPushBehavior()
     let dynamicAnimator = UIDynamicAnimator()
+    var boundaryArray = [UIView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,9 +68,12 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         let collisionBehavior = UICollisionBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight,  boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, playBall])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
+        for boundary in boundaryArray {
+        collisionBehavior.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
         collisionBehavior.collisionMode = .Everything
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
+        }
         
         let pushBehavior5 = UIPushBehavior(items: [blueBlock1,blueBlock3,blueBlock5], mode: .Instantaneous)
         pushBehavior5.magnitude = 1.0
