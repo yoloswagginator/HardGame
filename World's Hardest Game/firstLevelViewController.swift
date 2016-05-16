@@ -58,9 +58,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         boundaryArray.append(boundaryEleven)
         boundaryArray.append(boundaryTwelve)
         dynamicActions()
-        
     }
-    
 
     
     
@@ -107,9 +105,25 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(pushBehavior6)
 
         
-
+        
         
     }
+    func winLogic() {
+        if CGRectContainsRect(endPlatform.frame, playBall.frame) == true {
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+            alert.title = "CONGRAGULATIONS"
+            alert.message = "YOU WIN"
+            
+            
+            
+            let defaultAction = UIAlertAction(title: "CLICK TO RESET", style: .Default, handler: nil)
+            alert.addAction(defaultAction)
+            
+            presentViewController(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
     
     @IBAction func upButton(sender: UIButton) {
         
@@ -122,7 +136,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(pushBehaviorUno)
         print("start")
         
-        
+        winLogic()
 
     }
     
@@ -144,57 +158,60 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
 //        
 //        dynamicAnimator.removeBehavior(pushBehaviorUno)
 //        print("end")
-        
+        winLogic()
     }
     
     @IBAction func leftButton(sender: UIButton) {
         
-//        let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-//        pushBehavior2.magnitude = 1.0
-//        pushBehavior2.pushDirection = CGVectorMake(-0.1, 0)
-//        dynamicAnimator.addBehavior(pushBehavior2)
-//        self.pushBehaviorDos = pushBehavior2
-
+        let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior2.magnitude = 1.0
+        pushBehavior2.pushDirection = CGVectorMake(-0.1, 0)
+        dynamicAnimator.addBehavior(pushBehavior2)
+        self.pushBehaviorDos = pushBehavior2
+        winLogic()
     }
     
     @IBAction func leftEnd(sender: UIButton) {
-//        dynamicAnimator.removeBehavior(pushBehaviorDos)
+        dynamicAnimator.removeBehavior(pushBehaviorDos)
+        winLogic()
     }
     
     @IBAction func downButton(sender: UIButton) {
         
-//        let pushBehavior3 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-//        pushBehavior3.magnitude = 1.0
-//        pushBehavior3.pushDirection = CGVectorMake(0, 0.1)
-//        dynamicAnimator.addBehavior(pushBehavior3)
-//        self.pushBehaviorTres = pushBehavior3
-
+        let pushBehavior3 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior3.magnitude = 1.0
+        pushBehavior3.pushDirection = CGVectorMake(0, 0.1)
+        dynamicAnimator.addBehavior(pushBehavior3)
+        self.pushBehaviorTres = pushBehavior3
+        winLogic()
     }
     
     @IBAction func downEnd(sender: UIButton) {
-//        dynamicAnimator.removeBehavior(pushBehaviorTres)
+        dynamicAnimator.removeBehavior(pushBehaviorTres)
+        winLogic()
     }
     
     @IBAction func rightButton(sender: UIButton) {
         
-//        let pushBehavior4 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-//        pushBehavior4.magnitude = 1.0
-//        pushBehavior4.pushDirection = CGVectorMake(0.1, 0)
-//        dynamicAnimator.addBehavior(pushBehavior4)
-//        self.pushBehaviorCuatro = pushBehavior4
-
+        let pushBehavior4 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior4.magnitude = 1.0
+        pushBehavior4.pushDirection = CGVectorMake(0.1, 0)
+        dynamicAnimator.addBehavior(pushBehavior4)
+        self.pushBehaviorCuatro = pushBehavior4
+        winLogic()
         
     }
     
     @IBAction func rightEnd(sender: UIButton) {
-//         dynamicAnimator.removeBehavior(pushBehaviorCuatro)
-//         print("end")
+         dynamicAnimator.removeBehavior(pushBehaviorCuatro)
+         print("end")
+        winLogic()
     }
     
     
       }
     
-   
+
 
     
 
