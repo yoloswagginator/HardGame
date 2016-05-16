@@ -97,9 +97,26 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(pushBehavior6)
 
         
-
+        
         
     }
+    func winLogic() {
+        if CGRectContainsRect(endPlatform.frame, playBall.frame) {
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+            alert.title = "CONGRAGULATIONS"
+            alert.message = "YOU WIN"
+            
+            
+            
+            let defaultAction = UIAlertAction(title: "CLICK TO RESET", style: .Default, handler: nil)
+            alert.addAction(defaultAction)
+            
+            presentViewController(alert, animated: true, completion: nil)
+            
+
+        }
+    }
+    
     
     @IBAction func upButton(sender: UIButton) {
         
@@ -115,6 +132,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     @IBAction func upEnd(sender: UIButton) {
         dynamicAnimator.removeBehavior(pushBehaviorUno)
+        
     }
     
     @IBAction func leftButton(sender: UIButton) {
