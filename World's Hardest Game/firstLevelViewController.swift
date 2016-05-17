@@ -44,6 +44,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     var pushBehaviorCuatro = UIPushBehavior()
     let dynamicAnimator = UIDynamicAnimator()
     var boundaryArray = [UIView]()
+    var blockArray = [UIView]()
+    var winArray = [UIView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         boundaryArray.append(boundaryTen)
         boundaryArray.append(boundaryEleven)
         boundaryArray.append(boundaryTwelve)
+        blockArray.append(yellowBlock1)
+        blockArray.append(yellowBlock2)
         dynamicActions()
     }
 
@@ -72,7 +76,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicItemBehavior.elasticity = 1.0
         dynamicItemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehavior)
-        
+
         self.dbBall = UIDynamicItemBehavior(items: [playBall])
         dbBall.density = 100
         dbBall.friction = 0.0
@@ -90,7 +94,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         for boundary in boundaryArray {
         collisionBehavior.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
-        collisionBehavior.collisionMode = .Everything
+            collisionBehavior.collisionMode = .Everything
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
         }
@@ -124,10 +128,10 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
             
             let defaultAction = UIAlertAction(title: "CLICK TO RESET", style: .Default, handler: nil)
             alert.addAction(defaultAction)
-            
+        
             presentViewController(alert, animated: true, completion: nil)
         }
-        
+    
     }
     
     
@@ -192,7 +196,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.removeBehavior(pushBehaviorTres)
         winLogic()
     }
-    
+
     @IBAction func rightButton(sender: UIButton) {
         
         let pushBehavior4 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
@@ -213,7 +217,13 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem, atPoint p: CGPoint) {
    
     }
-    
+    func collisionBehavior(behavior: UICollisionBehavior, endedContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem) {
+        for block in blockArray {
+        if item1.isEqual(playBall) && item2.isEqual(block) || item2.isEqual(playBall) && item1.isEqual(block){
+            winArray.append(block)
+            }
+        }
+    }
     
       }
     
