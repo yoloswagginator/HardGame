@@ -58,9 +58,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         boundaryArray.append(boundaryEleven)
         boundaryArray.append(boundaryTwelve)
         dynamicActions()
-        
     }
-    
 
     
     
@@ -75,13 +73,17 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         self.db1 = dynamicItemBehavior
         
         let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [playBall])
-        dynamicItemBehaviorTwo.density = 1
+        dynamicItemBehaviorTwo.density = 100
         dynamicItemBehaviorTwo.friction = 0.0
         dynamicItemBehaviorTwo.resistance = 0.0
         dynamicItemBehaviorTwo.elasticity = 0
         dynamicItemBehaviorTwo.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
         self.db2 = dynamicItemBehaviorTwo
+        
+        let dynamicItemBehaviorThree = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
+        dynamicItemBehaviorThree.elasticity = 0
+        dynamicAnimator.addBehavior(dynamicItemBehaviorThree)
 
         let collisionBehavior = UICollisionBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, playBall])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
@@ -103,90 +105,113 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(pushBehavior6)
 
         
-
+        
         
     }
+    func winLogic() {
+        if CGRectContainsRect(endPlatform.frame, playBall.frame) == true {
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+            alert.title = "CONGRAGULATIONS"
+            alert.message = "YOU WIN"
+            
+            
+            
+            let defaultAction = UIAlertAction(title: "CLICK TO RESET", style: .Default, handler: nil)
+            alert.addAction(defaultAction)
+            
+            presentViewController(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
     
     @IBAction func upButton(sender: UIButton) {
         
         let speed = db2.linearVelocityForItem(playBall)
         print(speed)
         
-        let pushBehavior1 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-        pushBehavior1.magnitude = 1.0
-        pushBehavior1.pushDirection = CGVectorMake(0, -0.07)
-        dynamicAnimator.addBehavior(pushBehavior1)
-        self.pushBehaviorUno = pushBehavior1
+        self.pushBehaviorUno = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehaviorUno.magnitude = 10
+        pushBehaviorUno.angle = -3.14/2
+        dynamicAnimator.addBehavior(pushBehaviorUno)
         print("start")
         
-        
+        winLogic()
 
     }
     
     @IBAction func upEnd(sender: UIButton) {
         
-        let speed = db2.linearVelocityForItem(playBall)
-        dynamicAnimator.updateItemUsingCurrentState(playBall)
-        
-        print(speed)
-        
-        let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-        pushBehavior2.magnitude = 1.0
-        pushBehavior2.pushDirection = CGVectorMake(speed.x, -speed.y)
-        dynamicAnimator.addBehavior(pushBehavior2)
-        
+        self.pushBehaviorUno = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehaviorUno.magnitude = -10
+        pushBehaviorUno.angle = -3.14/2
+        dynamicAnimator.addBehavior(pushBehaviorUno)
+//        let speed = db2.linearVelocityForItem(playBall)
+//        dynamicAnimator.updateItemUsingCurrentState(playBall)
+//        
+//        print(speed)
+//        
+//        let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+//        pushBehavior2.magnitude = 1.0
+//        pushBehavior2.pushDirection = CGVectorMake(speed.x, -speed.y)
+//        dynamicAnimator.addBehavior(pushBehavior2)
+//        
 //        dynamicAnimator.removeBehavior(pushBehaviorUno)
 //        print("end")
-        
+        winLogic()
     }
     
     @IBAction func leftButton(sender: UIButton) {
         
-//        let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-//        pushBehavior2.magnitude = 1.0
-//        pushBehavior2.pushDirection = CGVectorMake(-0.1, 0)
-//        dynamicAnimator.addBehavior(pushBehavior2)
-//        self.pushBehaviorDos = pushBehavior2
-
+        let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior2.magnitude = 1.0
+        pushBehavior2.pushDirection = CGVectorMake(-0.1, 0)
+        dynamicAnimator.addBehavior(pushBehavior2)
+        self.pushBehaviorDos = pushBehavior2
+        winLogic()
     }
     
     @IBAction func leftEnd(sender: UIButton) {
-//        dynamicAnimator.removeBehavior(pushBehaviorDos)
+        dynamicAnimator.removeBehavior(pushBehaviorDos)
+        winLogic()
     }
     
     @IBAction func downButton(sender: UIButton) {
         
-//        let pushBehavior3 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-//        pushBehavior3.magnitude = 1.0
-//        pushBehavior3.pushDirection = CGVectorMake(0, 0.1)
-//        dynamicAnimator.addBehavior(pushBehavior3)
-//        self.pushBehaviorTres = pushBehavior3
-
+        let pushBehavior3 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior3.magnitude = 1.0
+        pushBehavior3.pushDirection = CGVectorMake(0, 0.1)
+        dynamicAnimator.addBehavior(pushBehavior3)
+        self.pushBehaviorTres = pushBehavior3
+        winLogic()
     }
     
     @IBAction func downEnd(sender: UIButton) {
-//        dynamicAnimator.removeBehavior(pushBehaviorTres)
+        dynamicAnimator.removeBehavior(pushBehaviorTres)
+        winLogic()
     }
     
     @IBAction func rightButton(sender: UIButton) {
         
-//        let pushBehavior4 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-//        pushBehavior4.magnitude = 1.0
-//        pushBehavior4.pushDirection = CGVectorMake(0.1, 0)
-//        dynamicAnimator.addBehavior(pushBehavior4)
-//        self.pushBehaviorCuatro = pushBehavior4
-
+        let pushBehavior4 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehavior4.magnitude = 1.0
+        pushBehavior4.pushDirection = CGVectorMake(0.1, 0)
+        dynamicAnimator.addBehavior(pushBehavior4)
+        self.pushBehaviorCuatro = pushBehavior4
+        winLogic()
         
     }
     
     @IBAction func rightEnd(sender: UIButton) {
-//         dynamicAnimator.removeBehavior(pushBehaviorCuatro)
-//         print("end")
+         dynamicAnimator.removeBehavior(pushBehaviorCuatro)
+         print("end")
+        winLogic()
     }
+    
     
       }
     
-   
+
 
     
 
