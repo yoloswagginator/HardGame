@@ -33,9 +33,11 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var boundaryTen: UIView!
     @IBOutlet weak var boundaryEleven: UIView!
     @IBOutlet weak var boundaryTwelve: UIView!
-   
-    var db1 = UIDynamicItemBehavior()
-    var db2 = UIDynamicItemBehavior()
+    
+    var addBehaviors = false
+    var atAWall = false
+    var cbBall = UICollisionBehavior()
+    var dbBall = UIDynamicItemBehavior()
     var pushBehaviorUno = UIPushBehavior()
     var pushBehaviorDos = UIPushBehavior()
     var pushBehaviorTres = UIPushBehavior()
@@ -70,18 +72,21 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicItemBehavior.elasticity = 1.0
         dynamicItemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(dynamicItemBehavior)
-        self.db1 = dynamicItemBehavior
         
-        let dynamicItemBehaviorTwo = UIDynamicItemBehavior(items: [playBall])
-        dynamicItemBehaviorTwo.density = 1
-        dynamicItemBehaviorTwo.friction = 0.0
-        dynamicItemBehaviorTwo.resistance = 0.0
-        dynamicItemBehaviorTwo.elasticity = 0
-        dynamicItemBehaviorTwo.allowsRotation = false
-        dynamicAnimator.addBehavior(dynamicItemBehaviorTwo)
-        self.db2 = dynamicItemBehaviorTwo
+        self.dbBall = UIDynamicItemBehavior(items: [playBall])
+        dbBall.density = 100
+        dbBall.friction = 0.0
+        dbBall.resistance = 0.0
+        dbBall.elasticity = 0
+        dbBall.allowsRotation = false
+        dynamicAnimator.addBehavior(dbBall)
+        
+        let dynamicItemBehaviorThree = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
+        dynamicItemBehaviorThree.elasticity = 0
+        dynamicItemBehavior.density = 1000000
+        dynamicAnimator.addBehavior(dynamicItemBehaviorThree)
 
-        let collisionBehavior = UICollisionBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5, playBall])
+        let collisionBehavior = UICollisionBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         for boundary in boundaryArray {
         collisionBehavior.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
@@ -89,6 +94,11 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
         }
+        
+        self.cbBall = UICollisionBehavior(items: [playBall])
+        cbBall.collisionMode = .Everything
+        cbBall.collisionDelegate = self
+        dynamicAnimator.addBehavior(cbBall)
         
         let pushBehavior5 = UIPushBehavior(items: [blueBlock1,blueBlock3,blueBlock5], mode: .Instantaneous)
         pushBehavior5.magnitude = 1.0
@@ -123,35 +133,34 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     @IBAction func upButton(sender: UIButton) {
         
-        let speed = db2.linearVelocityForItem(playBall)
-        print(speed)
+        if addBehaviors == true {
+        dynamicAnimator.addBehavior(dbBall)
+        dynamicAnimator.addBehavior(cbBall)
+        }
         
-        let pushBehavior1 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-        pushBehavior1.magnitude = 1.0
-        pushBehavior1.pushDirection = CGVectorMake(0, -0.07)
-        dynamicAnimator.addBehavior(pushBehavior1)
-        self.pushBehaviorUno = pushBehavior1
+        self.pushBehaviorUno = UIPushBehavior(items: [playBall], mode: .Instantaneous)
+        pushBehaviorUno.magnitude = 5
+        pushBehaviorUno.angle = -3.14/2
+        dynamicAnimator.addBehavior(pushBehaviorUno)
         print("start")
         
         winLogic()
+        
+        addBehaviors = false
+        
+        print(dynamicAnimator.behaviors.count)
 
     }
     
     @IBAction func upEnd(sender: UIButton) {
         
-        let speed = db2.linearVelocityForItem(playBall)
-        dynamicAnimator.updateItemUsingCurrentState(playBall)
+        dynamicAnimator.removeBehavior(pushBehaviorUno)
+        dynamicAnimator.removeBehavior(dbBall)
+        dynamicAnimator.removeBehavior(cbBall)
         
-        print(speed)
-    
-//        let pushBehavior2 = UIPushBehavior(items: [playBall], mode: .Instantaneous)
-//        pushBehavior2.magnitude = 1.0
-//        pushBehavior2.pushDirection = CGVectorMake(speed.x, -speed.y)
-//        dynamicAnimator.addBehavior(pushBehavior2)
-//        
-//        dynamicAnimator.removeBehavior(pushBehaviorUno)
-//        print("end")
-        winLogic()
+        addBehaviors = true
+        
+        print(dynamicAnimator.behaviors.count)
     }
     
     @IBAction func leftButton(sender: UIButton) {
@@ -200,6 +209,11 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
          print("end")
         winLogic()
     }
+    
+    func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem, atPoint p: CGPoint) {
+   
+    }
+    
     
       }
     
