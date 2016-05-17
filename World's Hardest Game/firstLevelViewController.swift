@@ -47,6 +47,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     var boundaryArray = [UIView]()
     var blockArray = [UIView]()
     var winArray = [UIView]()
+    var allowWinning = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,10 +95,10 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         self.cb = UICollisionBehavior(items: [playBall, boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
         cb.translatesReferenceBoundsIntoBoundary = true
         for boundary in boundaryArray {
-        collisionBehavior.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
-            collisionBehavior.collisionMode = .Everything
-        collisionBehavior.collisionDelegate = self
-        dynamicAnimator.addBehavior(collisionBehavior)
+        cb.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
+            cb.collisionMode = .Everything
+        cb.collisionDelegate = self
+        dynamicAnimator.addBehavior(cb)
         }
         
         let pushBehavior5 = UIPushBehavior(items: [blueBlock1,blueBlock3,blueBlock5], mode: .Instantaneous)
@@ -115,7 +116,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
     }
     func winLogic() {
-        if CGRectContainsRect(endPlatform.frame, playBall.frame) == true {
+        if CGRectContainsRect(endPlatform.frame, playBall.frame) == true && allowWinning == true{
             let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
             alert.title = "CONGRAGULATIONS"
             alert.message = "YOU WIN"
@@ -251,14 +252,15 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         winLogic()
     }
     
-    func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem, atPoint p: CGPoint) {
-   
-    }
+    
     func collisionBehavior(behavior: UICollisionBehavior, endedContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem) {
         for block in blockArray {
         if item1.isEqual(playBall) && item2.isEqual(block) || item2.isEqual(playBall) && item1.isEqual(block){
             winArray.append(block)
             }
+        }
+        if winArray.count == 2 {
+            allowWinning == true
         }
     }
     
