@@ -89,7 +89,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         for boundary in boundaryArray {
         collisionBehavior.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
-        collisionBehavior.collisionMode = .Boundaries
+        collisionBehavior.collisionMode = .Everything
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
         }
