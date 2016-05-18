@@ -37,6 +37,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     var addBehaviors = false
     var atAWall = false
     var cb = UICollisionBehavior()
+    var cb2 = UICollisionBehavior()
+    var db = UIDynamicItemBehavior()
     var cbBall = UICollisionBehavior()
     var dbBall = UIDynamicItemBehavior()
     var pushBehaviorUno = UIPushBehavior()
@@ -87,6 +89,14 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dbBall.allowsRotation = false
         dynamicAnimator.addBehavior(dbBall)
         
+        self.db = UIDynamicItemBehavior(items: [yellowBlock1,yellowBlock1])
+        db.density = 1
+        db.friction = 0.0
+        db.resistance = 0.0
+        db.elasticity = 0
+        db.allowsRotation = false
+        dynamicAnimator.addBehavior(db)
+        
         let dynamicItemBehaviorThree = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
         dynamicItemBehaviorThree.elasticity = 0
         dynamicItemBehavior.density = 10
@@ -100,6 +110,12 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         cb.collisionDelegate = self
         dynamicAnimator.addBehavior(cb)
         }
+        
+        self.cb2 = UICollisionBehavior(items: [playBall,yellowBlock1,yellowBlock2])
+        cb2.translatesReferenceBoundsIntoBoundary = true
+        cb2.collisionMode = .Everything
+        cb2.collisionDelegate = self
+        dynamicAnimator.addBehavior(cb2)
         
         let pushBehavior5 = UIPushBehavior(items: [blueBlock1,blueBlock3,blueBlock5], mode: .Instantaneous)
         pushBehavior5.magnitude = 1.0
@@ -138,6 +154,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(dbBall)
         dynamicAnimator.addBehavior(cbBall)
         cb.addItem(playBall)
+        cb2.addItem(playBall)
         }
         
         self.pushBehaviorUno = UIPushBehavior(items: [playBall], mode: .Instantaneous)
@@ -158,7 +175,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.removeBehavior(pushBehaviorUno)
         dynamicAnimator.removeBehavior(dbBall)
         cb.removeItem(playBall)
-        
+        cb2.removeItem(playBall)
+
         addBehaviors = true
         
         winLogic()
@@ -170,6 +188,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
             dynamicAnimator.addBehavior(dbBall)
             dynamicAnimator.addBehavior(cbBall)
             cb.addItem(playBall)
+            cb2.addItem(playBall)
         }
         
         self.pushBehaviorDos = UIPushBehavior(items: [playBall], mode: .Instantaneous)
@@ -187,6 +206,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.removeBehavior(pushBehaviorDos)
         dynamicAnimator.removeBehavior(dbBall)
         cb.removeItem(playBall)
+        cb2.removeItem(playBall)
         
         addBehaviors = true
         
@@ -199,6 +219,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
             dynamicAnimator.addBehavior(dbBall)
             dynamicAnimator.addBehavior(cbBall)
             cb.addItem(playBall)
+            cb2.addItem(playBall)
         }
 
         self.pushBehaviorTres = UIPushBehavior(items: [playBall], mode: .Instantaneous)
@@ -216,6 +237,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.removeBehavior(pushBehaviorTres)
         dynamicAnimator.removeBehavior(dbBall)
         cb.removeItem(playBall)
+        cb2.removeItem(playBall)
         
         addBehaviors = true
         
@@ -228,6 +250,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
             dynamicAnimator.addBehavior(dbBall)
             dynamicAnimator.addBehavior(cbBall)
             cb.addItem(playBall)
+            cb2.addItem(playBall)
         }
 
         self.pushBehaviorCuatro = UIPushBehavior(items: [playBall], mode: .Instantaneous)
@@ -246,6 +269,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.removeBehavior(pushBehaviorCuatro)
         dynamicAnimator.removeBehavior(dbBall)
         cb.removeItem(playBall)
+        cb2.removeItem(playBall)
+
         
         addBehaviors = true
         
@@ -255,12 +280,15 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     func collisionBehavior(behavior: UICollisionBehavior, endedContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem) {
         for block in blockArray {
-        if item1.isEqual(playBall) && item2.isEqual(block) || item2.isEqual(playBall) && item1.isEqual(block){
+            if item1.isEqual(playBall) && item2.isEqual(block) || item2.isEqual(playBall) && item1.isEqual(block){
             winArray.append(block)
+            block.hidden = true
+            cb2.removeItem(block)
+            
             }
         }
         if winArray.count == 2 {
-            allowWinning == true
+            allowWinning = true
         }
     }
     
