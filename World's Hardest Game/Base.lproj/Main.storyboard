@@ -191,6 +191,13 @@
                                 <rect key="frame" x="1002" y="296" width="6" height="176"/>
                                 <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nH-C8-qf6">
+                                <rect key="frame" x="911" y="28" width="61" height="66"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="CAZ-Fk-BtM" eventType="touchUpInside" id="GJj-Ig-OB1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9287709197808095" green="0.81564884267926452" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -225,6 +232,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Uy-0q-qLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1478" y="349"/>
+        </scene>
+        <!--Loser View Controller-->
+        <scene sceneID="gd7-zy-Osu">
+            <objects>
+                <viewController id="1Zr-2D-lPj" customClass="loserViewController" customModule="World_s_Hardest_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xNT-5h-b0A"/>
+                        <viewControllerLayoutGuide type="bottom" id="I3S-NQ-at8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O7S-78-qFd">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="u lose lol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixj-bx-iYl">
+                                <rect key="frame" x="247" y="283" width="369" height="253"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="91"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-5S-uao">
+                                <rect key="frame" x="349" y="544" width="156" height="106"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="play agen"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="1Zr-2D-lPj" eventType="touchUpInside" id="6dV-ri-6vs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoj-ao-HIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="349"/>
         </scene>
     </scenes>
     <resources>
