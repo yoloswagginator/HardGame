@@ -90,10 +90,10 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         self.cb = UICollisionBehavior(items: [playBall, boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
         cb.translatesReferenceBoundsIntoBoundary = true
         for boundary in boundaryArray {
-        collisionBehavior.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
-        collisionBehavior.collisionMode = .Everything
-        collisionBehavior.collisionDelegate = self
-        dynamicAnimator.addBehavior(collisionBehavior)
+        cb.addBoundaryWithIdentifier("\(boundary)", forPath: UIBezierPath(rect: boundary.frame))
+        cb.collisionMode = .Everything
+        cb.collisionDelegate = self
+        dynamicAnimator.addBehavior(cb)
         }
         
         let pushBehavior5 = UIPushBehavior(items: [blueBlock1,blueBlock3,blueBlock5], mode: .Instantaneous)
