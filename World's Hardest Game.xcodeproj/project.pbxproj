@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D714855D1CD3ECD7004C1EBF /* firstLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714855C1CD3ECD7004C1EBF /* firstLevelViewController.swift */; };
+		D7AA7C9D1CECFBE3004F243F /* loserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA7C9C1CECFBE3004F243F /* loserViewController.swift */; };
 		D7B26FBC1CD2969B00959FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B26FBB1CD2969B00959FEB /* AppDelegate.swift */; };
 		D7B26FBE1CD2969B00959FEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B26FBD1CD2969B00959FEB /* ViewController.swift */; };
 		D7B26FC11CD2969B00959FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B26FBF1CD2969B00959FEB /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		D714855C1CD3ECD7004C1EBF /* firstLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstLevelViewController.swift; sourceTree = "<group>"; };
+		D7AA7C9C1CECFBE3004F243F /* loserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loserViewController.swift; sourceTree = "<group>"; };
 		D7B26FB81CD2969B00959FEB /* World's Hardest Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World's Hardest Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B26FBB1CD2969B00959FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B26FBD1CD2969B00959FEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				D7B26FBD1CD2969B00959FEB /* ViewController.swift */,
 				D714855C1CD3ECD7004C1EBF /* firstLevelViewController.swift */,
 				D7B26FBF1CD2969B00959FEB /* Main.storyboard */,
+				D7AA7C9C1CECFBE3004F243F /* loserViewController.swift */,
 				D7B26FC21CD2969B00959FEB /* Assets.xcassets */,
 				D7B26FC41CD2969B00959FEB /* LaunchScreen.storyboard */,
 				D7B26FC71CD2969B00959FEB /* Info.plist */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7AA7C9D1CECFBE3004F243F /* loserViewController.swift in Sources */,
 				D7B26FBE1CD2969B00959FEB /* ViewController.swift in Sources */,
 				D714855D1CD3ECD7004C1EBF /* firstLevelViewController.swift in Sources */,
 				D7B26FBC1CD2969B00959FEB /* AppDelegate.swift in Sources */,

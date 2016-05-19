@@ -34,6 +34,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var boundaryEleven: UIView!
     @IBOutlet weak var boundaryTwelve: UIView!
     
+    var collision = false
     var addBehaviors = false
     var atAWall = false
     var cb = UICollisionBehavior()
@@ -105,11 +106,29 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         pushBehavior6.magnitude = 1.0
         pushBehavior6.angle = 3.14/2
         dynamicAnimator.addBehavior(pushBehavior6)
-
         
+    }
+    
+    @IBAction func pause(sender: UIButton) {
+        dynamicAnimator.removeAllBehaviors()
+        
+        let alert = UIAlertController(title: "Paused", message: "press OK to resume", preferredStyle: .Alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .Default) { (alert) in
+            self.dynamicActions()
+        }
+        alert.addAction(ok)
+        
+        presentViewController(alert, animated: true, completion: nil)
         
         
     }
+    func addCollisionBehaviors() {
+        dynamicAnimator.addBehavior(dbBall)
+        dynamicAnimator.addBehavior(cbBall)
+        cb.addItem(playBall)
+    }
+    
     func winLogic() {
         if CGRectContainsRect(endPlatform.frame, playBall.frame) == true {
             let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
@@ -156,6 +175,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         addBehaviors = true
         
+        addCollisionBehaviors()
         winLogic()
     }
     
@@ -185,6 +205,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         addBehaviors = true
         
+        addCollisionBehaviors()
         winLogic()
     }
     
@@ -214,6 +235,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         addBehaviors = true
         
+        addCollisionBehaviors()
         winLogic()
     }
     
@@ -244,12 +266,37 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         addBehaviors = true
         
+        addCollisionBehaviors()
         winLogic()
+        
     }
     
     func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem, atPoint p: CGPoint) {
-   
-    }
+//     
+//        if item1.isEqual(blueBlock1) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock1) {
+//            presentViewController(loserViewController, animated: true, completion: nil)
+//        }
+//        
+//        if item1.isEqual(blueBlock2) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock2) {
+//            presentViewController(loserViewController, animated: true, completion: nil)
+//        }
+//
+//        if item1.isEqual(blueBlock3) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock3) {
+//            presentViewController(loserViewController, animated: true, completion: nil)
+//        }
+//
+//        if item1.isEqual(blueBlock4) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock4) {
+//            presentViewController(loserViewController, animated: true, completion: nil)
+//        }
+//        
+//        if item1.isEqual(blueBlock5) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock5) {
+//            presentViewController(loserViewController, animated: true, completion: nil)
+//        }
+//
+//
+        
+        }
+    
     
     
       }
