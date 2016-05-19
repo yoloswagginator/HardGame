@@ -148,6 +148,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(dbBall)
         dynamicAnimator.addBehavior(cbBall)
         cb.addItem(playBall)
+        cb2.addItem(playBall)
     }
     
     func winLogic() {
@@ -324,11 +325,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
 //        }
 //
 //
-        
-        }
     
-    
-    func collisionBehavior(behavior: UICollisionBehavior, endedContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem) {
         for block in blockArray {
             if item1.isEqual(playBall) && item2.isEqual(block) || item2.isEqual(playBall) && item1.isEqual(block){
             winArray.append(block)
