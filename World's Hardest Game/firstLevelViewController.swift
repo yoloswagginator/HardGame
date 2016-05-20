@@ -71,8 +71,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     }
 
     override func viewWillAppear(animated: Bool) {
-        dynamicActions()
         makeBall()
+        dynamicActions()
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -97,7 +97,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dbBall.elasticity = 0
         dbBall.allowsRotation = false
         dynamicAnimator.addBehavior(dbBall)
-        
+
         self.db = UIDynamicItemBehavior(items: [yellowBlock1,yellowBlock1])
         db.density = 1
         db.friction = 0.0
@@ -143,7 +143,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         playBall.backgroundColor = UIColor.greenColor()
         view.addSubview(playBall)
     }
-    
+
     @IBAction func pause(sender: UIButton) {
         dynamicAnimator.removeAllBehaviors()
         
@@ -358,7 +358,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     
     
-      }
+}
 
 
 
