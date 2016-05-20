@@ -75,10 +75,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue_rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="unu-of-UJq">
                                 <rect key="frame" x="20" y="300" width="109" height="168"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYg-Oi-Apg">
-                                <rect key="frame" x="62" y="372" width="25" height="24"/>
-                                <color key="backgroundColor" red="0.19890764134515415" green="1" blue="0.23478125494468349" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eti-Ie-Bxa">
                                 <rect key="frame" x="611" y="605" width="158" height="114"/>
                                 <color key="backgroundColor" red="1" green="0.75843145820000002" blue="0.67646930439999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -235,20 +231,20 @@
                         <outlet property="boundaryTwo" destination="9H9-bk-4iS" id="Y8B-gH-ftW"/>
                         <outlet property="endPlatform" destination="tTb-X0-NF8" id="vLk-d3-WWm"/>
                         <outlet property="mainPlatform" destination="D3h-9R-Q3b" id="gBd-Ys-hEZ"/>
-                        <outlet property="playBall" destination="eYg-Oi-Apg" id="6oF-XM-ze5"/>
                         <outlet property="startPlatform" destination="unu-of-UJq" id="KGi-4d-gJp"/>
                         <outlet property="yellowBlock1" destination="hbC-Q5-wPo" id="LNK-LV-doe"/>
                         <outlet property="yellowBlock2" destination="SSl-Fl-fLz" id="scv-7b-9aP"/>
+                        <segue destination="1Zr-2D-lPj" kind="presentation" identifier="loserSegue" id="2mA-BW-uef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Uy-0q-qLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1478" y="349"/>
         </scene>
-        <!--Loser View Controller-->
+        <!--loserController-->
         <scene sceneID="gd7-zy-Osu">
             <objects>
-                <viewController id="1Zr-2D-lPj" customClass="loserViewController" customModule="World_s_Hardest_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="loserController" id="1Zr-2D-lPj" customClass="loserViewController" customModule="World_s_Hardest_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xNT-5h-b0A"/>
                         <viewControllerLayoutGuide type="bottom" id="I3S-NQ-at8"/>
@@ -258,15 +254,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="u lose lol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixj-bx-iYl">
-                                <rect key="frame" x="247" y="283" width="369" height="253"/>
+                                <rect key="frame" x="328" y="257" width="369" height="253"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="91"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-5S-uao">
-                                <rect key="frame" x="349" y="544" width="156" height="106"/>
+                                <rect key="frame" x="434" y="525" width="156" height="106"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="play agen"/>
+                                <state key="normal" title="play again"/>
                                 <connections>
                                     <action selector="dismiss:" destination="1Zr-2D-lPj" eventType="touchUpInside" id="6dV-ri-6vs"/>
                                 </connections>
