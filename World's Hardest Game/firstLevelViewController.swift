@@ -13,7 +13,6 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var startPlatform: UIImageView!
     @IBOutlet weak var mainPlatform: UIImageView!
     @IBOutlet weak var endPlatform: UIImageView!
-    @IBOutlet weak var playBall: UIView!
     @IBOutlet weak var blueBlock1: UIView!
     @IBOutlet weak var blueBlock2: UIView!
     @IBOutlet weak var blueBlock3: UIView!
@@ -34,6 +33,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var boundaryEleven: UIView!
     @IBOutlet weak var boundaryTwelve: UIView!
     
+    var playBall = UIView()
     var collision = false
     var addBehaviors = false
     var atAWall = false
@@ -68,9 +68,17 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         boundaryArray.append(boundaryTwelve)
         blockArray.append(yellowBlock1)
         blockArray.append(yellowBlock2)
-        dynamicActions()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        dynamicActions()
+        makeBall()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        dynamicAnimator.removeAllBehaviors()
+        view.willRemoveSubview(playBall)
+    }
 
 
     func dynamicActions() {
@@ -130,6 +138,12 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
     }
     
+    func makeBall() {
+        playBall.frame = CGRect(x: 62, y: 372, width: 25, height: 25)
+        playBall.backgroundColor = UIColor.greenColor()
+        view.addSubview(playBall)
+    }
+    
     @IBAction func pause(sender: UIButton) {
         dynamicAnimator.removeAllBehaviors()
         
@@ -148,6 +162,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(dbBall)
         dynamicAnimator.addBehavior(cbBall)
         cb.addItem(playBall)
+        cb2.addItem(playBall)
     }
     
     func winLogic() {
@@ -302,31 +317,31 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     }
     
     func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem, atPoint p: CGPoint) {
-//     
-//        if item1.isEqual(blueBlock1) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock1) {
-//            presentViewController(loserViewController, animated: true, completion: nil)
-//        }
-//        
-//        if item1.isEqual(blueBlock2) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock2) {
-//            presentViewController(loserViewController, animated: true, completion: nil)
-//        }
-//
-//        if item1.isEqual(blueBlock3) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock3) {
-//            presentViewController(loserViewController, animated: true, completion: nil)
-//        }
-//
-//        if item1.isEqual(blueBlock4) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock4) {
-//            presentViewController(loserViewController, animated: true, completion: nil)
-//        }
-//        
-//        if item1.isEqual(blueBlock5) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock5) {
-//            presentViewController(loserViewController, animated: true, completion: nil)
-//        }
-//
-//
         
+        let nvc = loserViewController()
+     
+        if item1.isEqual(blueBlock1) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock1) {
+            performSegueWithIdentifier("loserSegue", sender: nil)
         }
-    
+        
+        if item1.isEqual(blueBlock2) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock2) {
+            performSegueWithIdentifier("loserSegue", sender: nil)
+        }
+
+        if item1.isEqual(blueBlock3) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock3) {
+            performSegueWithIdentifier("loserSegue", sender: nil)
+        }
+
+        if item1.isEqual(blueBlock4) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock4) {
+            performSegueWithIdentifier("loserSegue", sender: nil)
+        }
+        
+        if item1.isEqual(blueBlock5) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock5) {
+            performSegueWithIdentifier("loserSegue", sender: nil)
+        }
+
+
+        
     
     func collisionBehavior(behavior: UICollisionBehavior, endedContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem) {
         for block in blockArray {
@@ -342,9 +357,11 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         }
     }
     
+    
+    
       }
-    
+}
 
 
-    
+
 
