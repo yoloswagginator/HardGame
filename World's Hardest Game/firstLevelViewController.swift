@@ -49,6 +49,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     let dynamicAnimator = UIDynamicAnimator()
     var boundaryArray = [UIView]()
     var blockArray = [UIView]()
+    var blueBlockArray = [UIView]()
     var winArray = [UIView]()
     var allowWinning = false
     
@@ -68,6 +69,11 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         boundaryArray.append(boundaryTwelve)
         blockArray.append(yellowBlock1)
         blockArray.append(yellowBlock2)
+        blueBlockArray.append(blueBlock1)
+        blueBlockArray.append(blueBlock2)
+        blueBlockArray.append(blueBlock3)
+        blueBlockArray.append(blueBlock4)
+        blueBlockArray.append(blueBlock5)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -78,6 +84,12 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     override func viewDidDisappear(animated: Bool) {
         dynamicAnimator.removeAllBehaviors()
         view.willRemoveSubview(playBall)
+        for block in blueBlockArray {
+            view.willRemoveSubview(block)
+        }
+        for block in blockArray {
+            view.willRemoveSubview(block)
+        }
     }
 
 
@@ -142,16 +154,58 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         playBall.frame = CGRect(x: 62, y: 372, width: 25, height: 25)
         playBall.backgroundColor = UIColor.greenColor()
         view.addSubview(playBall)
+        blueBlock1.frame = CGRect(x: 242, y: 369, width: 30, height: 30)
+        blueBlock2.frame = CGRect(x: 372, y: 369, width: 30, height: 30)
+        blueBlock3.frame = CGRect(x: 497, y: 369, width: 30, height: 30)
+        blueBlock4.frame = CGRect(x: 626, y: 369, width: 30, height: 30)
+        blueBlock5.frame = CGRect(x: 753, y: 369, width: 30, height: 30)
+        yellowBlock1.frame = CGRect(x: 505, y: 243, width: 15, height: 15)
+        yellowBlock2.frame = CGRect(x: 505, y: 508, width: 15, height: 15)
+        for block in blueBlockArray {
+            block.backgroundColor = UIColor.blueColor()
+            view.addSubview(block)
+        }
+        for block in blockArray {
+            block.hidden = false
+            block.backgroundColor = UIColor.yellowColor()
+            view.addSubview(block)
+        }
     }
+//    func resetGame(action: UIAlertAction) {
+//        view.willRemoveSubview(playBall)
+//        for block in blueBlockArray {
+//            view.willRemoveSubview(block)
+//        }
+//        for block in blockArray {
+//            view.willRemoveSubview(block)
+//        }
+//        playBall.frame = CGRect(x: 62, y: 372, width: 25, height: 25)
+//        playBall.backgroundColor = UIColor.greenColor()
+//        view.addSubview(playBall)
+//        blueBlock1.frame = CGRect(x: 242, y: 369, width: 30, height: 30)
+//        blueBlock2.frame = CGRect(x: 372, y: 369, width: 30, height: 30)
+//        blueBlock3.frame = CGRect(x: 497, y: 369, width: 30, height: 30)
+//        blueBlock4.frame = CGRect(x: 626, y: 369, width: 30, height: 30)
+//        blueBlock5.frame = CGRect(x: 753, y: 369, width: 30, height: 30)
+//        yellowBlock1.frame = CGRect(x: 505, y: 243, width: 15, height: 15)
+//        yellowBlock2.frame = CGRect(x: 505, y: 508, width: 15, height: 15)
+//        for block in blueBlockArray {
+//            block.backgroundColor = UIColor.blueColor()
+//            view.addSubview(block)
+//        }
+//        for block in blockArray {
+//            block.hidden = false
+//            block.backgroundColor = UIColor.yellowColor()
+//            view.addSubview(block)
+//        }
+//    }
 
     @IBAction func pause(sender: UIButton) {
         dynamicAnimator.removeAllBehaviors()
         
         let alert = UIAlertController(title: "Paused", message: "press OK to resume", preferredStyle: .Alert)
         
-        let ok = UIAlertAction(title: "OK", style: .Default) { (alert) in
-            self.dynamicActions()
-        }
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alert.addAction(ok)
         
         presentViewController(alert, animated: true, completion: nil)
