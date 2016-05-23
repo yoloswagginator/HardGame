@@ -205,7 +205,9 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         let alert = UIAlertController(title: "Paused", message: "press OK to resume", preferredStyle: .Alert)
         
-        let ok = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let ok = UIAlertAction(title: "OK", style: .Default) { (alert) in
+            self.dynamicActions()
+        }
         alert.addAction(ok)
         
         presentViewController(alert, animated: true, completion: nil)
@@ -410,6 +412,9 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         }
     }
     
+    @IBAction func backButton(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
 }
