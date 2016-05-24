@@ -1,3 +1,4 @@
+//  Lukas Wilke, Logan Shuck, Timmy Somary
 //
 //  firstLevelViewController.swift
 //  World's Hardest Game
@@ -171,34 +172,6 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
             view.addSubview(block)
         }
     }
-//    func resetGame(action: UIAlertAction) {
-//        view.willRemoveSubview(playBall)
-//        for block in blueBlockArray {
-//            view.willRemoveSubview(block)
-//        }
-//        for block in blockArray {
-//            view.willRemoveSubview(block)
-//        }
-//        playBall.frame = CGRect(x: 62, y: 372, width: 25, height: 25)
-//        playBall.backgroundColor = UIColor.greenColor()
-//        view.addSubview(playBall)
-//        blueBlock1.frame = CGRect(x: 242, y: 369, width: 30, height: 30)
-//        blueBlock2.frame = CGRect(x: 372, y: 369, width: 30, height: 30)
-//        blueBlock3.frame = CGRect(x: 497, y: 369, width: 30, height: 30)
-//        blueBlock4.frame = CGRect(x: 626, y: 369, width: 30, height: 30)
-//        blueBlock5.frame = CGRect(x: 753, y: 369, width: 30, height: 30)
-//        yellowBlock1.frame = CGRect(x: 505, y: 243, width: 15, height: 15)
-//        yellowBlock2.frame = CGRect(x: 505, y: 508, width: 15, height: 15)
-//        for block in blueBlockArray {
-//            block.backgroundColor = UIColor.blueColor()
-//            view.addSubview(block)
-//        }
-//        for block in blockArray {
-//            block.hidden = false
-//            block.backgroundColor = UIColor.yellowColor()
-//            view.addSubview(block)
-//        }
-//    }
 
     @IBAction func pause(sender: UIButton) {
         dynamicAnimator.removeAllBehaviors()
@@ -374,7 +347,6 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem, atPoint p: CGPoint) {
         
-        let nvc = loserViewController()
      
         if item1.isEqual(blueBlock1) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock1) {
             performSegueWithIdentifier("loserSegue", sender: nil)

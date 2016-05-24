@@ -1,3 +1,4 @@
+//  Lukas Wilke, Logan Shuck, Timmy Somary
 //
 //  loserViewController.swift
 //  World's Hardest Game

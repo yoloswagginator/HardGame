@@ -1,4 +1,4 @@
-//  Lukas Wilke, Timmy Somary, lshuck
+//  Lukas Wilke, Logan Shuck, Timmy Somary
 //
 //  ViewController.swift
 //  World's Hardest Game
@@ -15,6 +15,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
     }
 }
