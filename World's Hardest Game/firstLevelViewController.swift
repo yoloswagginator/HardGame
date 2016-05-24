@@ -53,6 +53,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     var blueBlockArray = [UIView]()
     var winArray = [UIView]()
     var allowWinning = false
+    var nextPageLabel = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +82,8 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     override func viewWillAppear(animated: Bool) {
         makeBall()
         dynamicActions()
+        winArray.removeAll()
+        allowWinning = false
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -196,18 +200,19 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     func winLogic() {
         if CGRectContainsRect(endPlatform.frame, playBall.frame) == true && allowWinning == true{
-            let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
-            alert.title = "CONGRAGULATIONS"
-            alert.message = "YOU WIN"
-            
-            
-            
-            let defaultAction = UIAlertAction(title: "CLICK TO RESET", style: .Default, handler: nil)
-            alert.addAction(defaultAction)
-        
-            presentViewController(alert, animated: true, completion: nil)
+            performSegueWithIdentifier("loserSegue", sender: nil)
         }
+        
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let next = segue.destinationViewController as! loserViewController
+        if CGRectContainsRect(endPlatform.frame, playBall.frame) == true && allowWinning == true{
+            next.labelText = true
+        }
+        else  {
+            next.labelText = false
+        }
     }
     
     

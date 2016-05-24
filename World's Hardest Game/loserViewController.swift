@@ -10,11 +10,21 @@
 import UIKit
 
 class loserViewController: UIViewController {
+    
+    @IBOutlet weak var winOrLoseButton: UILabel!
+    
+    var labelText = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        if labelText == true {
+            winOrLoseButton.text = "You Win LOL"
+        }
+        else {
+            winOrLoseButton.text = "You Lose LOL"
+        }
+
     }
 
     @IBAction func dismiss(sender: UIButton) {

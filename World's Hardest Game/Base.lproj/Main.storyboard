@@ -314,6 +314,9 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="winOrLoseButton" destination="Ixj-bx-iYl" id="sXs-Ti-nfd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoj-ao-HIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
