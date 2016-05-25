@@ -19,10 +19,10 @@ class loserViewController: UIViewController {
         super.viewDidLoad()
 
         if labelText == true {
-            winOrLoseButton.text = "You Win LOL"
+            winOrLoseButton.text = "You Win"
         }
         else {
-            winOrLoseButton.text = "You Lose LOL"
+            winOrLoseButton.text = "You Lose"
         }
         
     }
