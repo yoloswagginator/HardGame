@@ -24,12 +24,11 @@ class loserViewController: UIViewController {
         else {
             winOrLoseButton.text = "You Lose LOL"
         }
-
+        
     }
 
     @IBAction func dismiss(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
     
 }
