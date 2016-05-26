@@ -43,18 +43,18 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     var winArray = [UIView]()
     var allowWinning = false
     var nextPageLabel = false
-    let boundaryOne = UIView(frame: CGRect(x: 16, y: 296, width: 113, height: 6))
-    let boundaryTwo = UIView(frame: CGRect(x: 16, y: 296, width: 6, height: 176))
-    let boundaryThree = UIView(frame: CGRect(x: 16, y: 466, width: 113, height: 6))
-    let boundaryFour = UIView(frame: CGRect(x: 121, y: 216, width: 8, height: 81))
-    let boundaryFive = UIView(frame: CGRect(x: 121, y: 466, width: 8, height: 81))
-    let boundarySix = UIView(frame: CGRect(x: 121, y: 216, width: 782, height: 8))
-    let boundarySeven = UIView(frame: CGRect(x: 895, y: 216, width: 8, height: 81))
-    let boundaryEight = UIView(frame: CGRect(x: 121, y: 546, width: 782, height: 6))
-    let boundaryNine = UIView(frame: CGRect(x: 895, y: 466, width: 8, height: 81))
-    let boundaryTen = UIView(frame: CGRect(x: 895, y: 296, width: 113, height: 6))
-    let boundaryEleven = UIView(frame: CGRect(x: 1002, y: 296, width: 6, height: 176))
-    let boundaryTwelve = UIView(frame: CGRect(x: 895, y: 466, width: 113, height: 6))
+    var boundaryOne = UIView(frame: CGRect(x: 16, y: 296, width: 113, height: 6))
+    var boundaryTwo = UIView(frame: CGRect(x: 16, y: 296, width: 6, height: 176))
+    var boundaryThree = UIView(frame: CGRect(x: 16, y: 466, width: 113, height: 6))
+    var boundaryFour = UIView(frame: CGRect(x: 121, y: 216, width: 8, height: 81))
+    var boundaryFive = UIView(frame: CGRect(x: 121, y: 466, width: 8, height: 81))
+    var boundarySix = UIView(frame: CGRect(x: 121, y: 216, width: 782, height: 8))
+    var boundarySeven = UIView(frame: CGRect(x: 895, y: 216, width: 8, height: 81))
+    var boundaryEight = UIView(frame: CGRect(x: 121, y: 546, width: 782, height: 6))
+    var boundaryNine = UIView(frame: CGRect(x: 895, y: 466, width: 8, height: 81))
+    var boundaryTen = UIView(frame: CGRect(x: 895, y: 296, width: 113, height: 6))
+    var boundaryEleven = UIView(frame: CGRect(x: 1002, y: 296, width: 6, height: 176))
+    var boundaryTwelve = UIView(frame: CGRect(x: 895, y: 466, width: 113, height: 6))
 
     
     
@@ -97,12 +97,15 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         for block in blockArray {
             view.willRemoveSubview(block)
         }
+        for boundary in boundaryArray {
+            view.willRemoveSubview(boundary)
+        }
     }
 
 
     func dynamicActions() {
         let dynamicItemBehavior = UIDynamicItemBehavior(items: [blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
-        dynamicItemBehavior.density = 1.0
+        dynamicItemBehavior.density = 10.0
         dynamicItemBehavior.friction = 0.0
         dynamicItemBehavior.resistance = 0.0
         dynamicItemBehavior.elasticity = 1.0
@@ -177,6 +180,25 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
             block.backgroundColor = UIColor.yellowColor()
             view.addSubview(block)
         }
+        boundaryOne = UIView(frame: CGRect(x: 16, y: 296, width: 113, height: 6))
+        boundaryTwo = UIView(frame: CGRect(x: 16, y: 296, width: 6, height: 176))
+        boundaryThree = UIView(frame: CGRect(x: 16, y: 466, width: 113, height: 6))
+        boundaryFour = UIView(frame: CGRect(x: 121, y: 216, width: 8, height: 81))
+        boundaryFive = UIView(frame: CGRect(x: 121, y: 466, width: 8, height: 81))
+        boundarySix = UIView(frame: CGRect(x: 121, y: 216, width: 782, height: 8))
+        boundarySeven = UIView(frame: CGRect(x: 895, y: 216, width: 8, height: 81))
+        boundaryEight = UIView(frame: CGRect(x: 121, y: 546, width: 782, height: 6))
+        boundaryNine = UIView(frame: CGRect(x: 895, y: 466, width: 8, height: 81))
+        boundaryTen = UIView(frame: CGRect(x: 895, y: 296, width: 113, height: 6))
+        boundaryEleven = UIView(frame: CGRect(x: 1002, y: 296, width: 6, height: 176))
+        boundaryTwelve = UIView(frame: CGRect(x: 895, y: 466, width: 113, height: 6))
+        
+        for boundary in boundaryArray {
+            view.addSubview(boundary)
+        }
+
+        
+        
     }
 
     @IBAction func pause(sender: UIButton) {
