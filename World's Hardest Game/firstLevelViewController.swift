@@ -127,7 +127,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         let dynamicItemBehaviorThree = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
         dynamicItemBehaviorThree.elasticity = 0
-        dynamicItemBehavior.density = 2
+        dynamicItemBehaviorThree.density = 1000
         dynamicAnimator.addBehavior(dynamicItemBehaviorThree)
 
         self.cb = UICollisionBehavior(items: [playBall, boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])
