@@ -19,7 +19,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INSTRUCTIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aii-P4-yn6">
                                 <rect key="frame" x="276" y="66" width="472" height="115"/>
                                 <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="55"/>
-                                <color key="textColor" red="0.75781931722356011" green="0.65086747733099182" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.91574634600000004" green="0.78964288449999998" blue="0.01150721748" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your goal is to get the green block from the first blue platform to the other" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTT-JJ-Xhg">
@@ -50,7 +50,7 @@
                                 <rect key="frame" x="454" y="640" width="116" height="69"/>
                                 <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="22"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.75781931719999995" green="0.65086747730000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.91574634599581151" green="0.78964288445765585" blue="0.011507217478404087" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismiss:" destination="Olx-Ve-Plv" eventType="touchUpInside" id="Ah1-zo-vYN"/>
@@ -388,6 +388,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="nextLevelButton" destination="5RK-YC-Yl5" id="m1N-cR-PVp"/>
                         <outlet property="winOrLoseButton" destination="Ixj-bx-iYl" id="sXs-Ti-nfd"/>
                     </connections>
                 </viewController>
