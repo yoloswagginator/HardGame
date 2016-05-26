@@ -21,18 +21,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var blueBlock5: UIView!
     @IBOutlet weak var yellowBlock1: UIView!
     @IBOutlet weak var yellowBlock2: UIView!
-    @IBOutlet weak var boundaryOne: UIView!
-    @IBOutlet weak var boundaryTwo: UIView!
-    @IBOutlet weak var boundaryThree: UIView!
-    @IBOutlet weak var boundaryFour: UIView!
-    @IBOutlet weak var boundaryFive: UIView!
-    @IBOutlet weak var boundarySix: UIView!
-    @IBOutlet weak var boundarySeven: UIView!
-    @IBOutlet weak var boundaryEight: UIView!
-    @IBOutlet weak var boundaryNine: UIView!
-    @IBOutlet weak var boundaryTen: UIView!
-    @IBOutlet weak var boundaryEleven: UIView!
-    @IBOutlet weak var boundaryTwelve: UIView!
+
     
     var playBall = UIView()
     var collision = false
@@ -54,7 +43,20 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     var winArray = [UIView]()
     var allowWinning = false
     var nextPageLabel = false
+    let boundaryOne = UIView(frame: CGRect(x: 16, y: 296, width: 113, height: 6))
+    let boundaryTwo = UIView(frame: CGRect(x: 16, y: 296, width: 6, height: 176))
+    let boundaryThree = UIView(frame: CGRect(x: 16, y: 466, width: 113, height: 6))
+    let boundaryFour = UIView(frame: CGRect(x: 121, y: 216, width: 8, height: 81))
+    let boundaryFive = UIView(frame: CGRect(x: 121, y: 466, width: 8, height: 81))
+    let boundarySix = UIView(frame: CGRect(x: 121, y: 216, width: 782, height: 8))
+    let boundarySeven = UIView(frame: CGRect(x: 895, y: 216, width: 8, height: 81))
+    let boundaryEight = UIView(frame: CGRect(x: 121, y: 546, width: 782, height: 6))
+    let boundaryNine = UIView(frame: CGRect(x: 895, y: 466, width: 8, height: 81))
+    let boundaryTen = UIView(frame: CGRect(x: 895, y: 296, width: 113, height: 6))
+    let boundaryEleven = UIView(frame: CGRect(x: 1002, y: 296, width: 6, height: 176))
+    let boundaryTwelve = UIView(frame: CGRect(x: 895, y: 466, width: 113, height: 6))
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,7 +127,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         
         let dynamicItemBehaviorThree = UIDynamicItemBehavior(items: [boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve])
         dynamicItemBehaviorThree.elasticity = 0
-        dynamicItemBehavior.density = 10
+        dynamicItemBehavior.density = 2
         dynamicAnimator.addBehavior(dynamicItemBehaviorThree)
 
         self.cb = UICollisionBehavior(items: [playBall, boundaryOne, boundaryTwo, boundaryThree, boundaryFour, boundaryFive, boundarySix, boundarySeven, boundaryEight, boundaryNine, boundaryTen, boundaryEleven, boundaryTwelve, blueBlock1, blueBlock2, blueBlock3, blueBlock4, blueBlock5])

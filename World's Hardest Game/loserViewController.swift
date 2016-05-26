@@ -27,12 +27,11 @@ class loserViewController: UIViewController {
             nextLevelButton.hidden = true
             
         }
-
+        
     }
 
     @IBAction func dismiss(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
     
 }

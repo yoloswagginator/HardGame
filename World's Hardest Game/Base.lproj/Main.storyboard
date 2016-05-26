@@ -242,54 +242,6 @@
                                     <action selector="rightEnd:" destination="CAZ-Fk-BtM" eventType="primaryActionTriggered" id="jSl-8U-eZ2"/>
                                 </connections>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Lg-4m-9NQ">
-                                <rect key="frame" x="16" y="296" width="113" height="6"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9H9-bk-4iS">
-                                <rect key="frame" x="16" y="296" width="6" height="176"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DST-AD-Fpc">
-                                <rect key="frame" x="16" y="466" width="113" height="6"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naq-LQ-W7D">
-                                <rect key="frame" x="121" y="216" width="782" height="8"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWx-YY-tDJ">
-                                <rect key="frame" x="121" y="546" width="782" height="6"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AeV-8j-8wB">
-                                <rect key="frame" x="895" y="216" width="8" height="81"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8j3-XX-n3o">
-                                <rect key="frame" x="895" y="466" width="8" height="81"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOA-9s-zb8">
-                                <rect key="frame" x="121" y="466" width="8" height="81"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VTK-aX-OqH">
-                                <rect key="frame" x="121" y="216" width="8" height="81"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17h-Vf-Ouc">
-                                <rect key="frame" x="895" y="296" width="113" height="6"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IoA-Rx-h1g">
-                                <rect key="frame" x="895" y="466" width="113" height="6"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALf-a9-9xn">
-                                <rect key="frame" x="1002" y="296" width="6" height="176"/>
-                                <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nH-C8-qf6">
                                 <rect key="frame" x="922" y="28" width="82" height="49"/>
                                 <color key="backgroundColor" red="0.46298637780000002" green="0.0" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -323,18 +275,6 @@
                         <outlet property="blueBlock3" destination="u53-dV-wcQ" id="Yk6-6e-JIg"/>
                         <outlet property="blueBlock4" destination="58c-EI-ZlN" id="NEX-Th-P7m"/>
                         <outlet property="blueBlock5" destination="blQ-Vy-JAq" id="IYX-yk-MUF"/>
-                        <outlet property="boundaryEight" destination="vWx-YY-tDJ" id="ibZ-xU-0fu"/>
-                        <outlet property="boundaryEleven" destination="ALf-a9-9xn" id="gbO-lT-sS0"/>
-                        <outlet property="boundaryFive" destination="sOA-9s-zb8" id="YxU-rh-S5N"/>
-                        <outlet property="boundaryFour" destination="VTK-aX-OqH" id="ONB-P1-IVL"/>
-                        <outlet property="boundaryNine" destination="8j3-XX-n3o" id="J8l-LZ-8pf"/>
-                        <outlet property="boundaryOne" destination="4Lg-4m-9NQ" id="3QH-pN-1pc"/>
-                        <outlet property="boundarySeven" destination="AeV-8j-8wB" id="M61-lX-U8A"/>
-                        <outlet property="boundarySix" destination="naq-LQ-W7D" id="qDA-o1-VnY"/>
-                        <outlet property="boundaryTen" destination="17h-Vf-Ouc" id="m6K-0K-Ng6"/>
-                        <outlet property="boundaryThree" destination="DST-AD-Fpc" id="vHn-rx-sEW"/>
-                        <outlet property="boundaryTwelve" destination="IoA-Rx-h1g" id="AF1-Xf-EEp"/>
-                        <outlet property="boundaryTwo" destination="9H9-bk-4iS" id="Y8B-gH-ftW"/>
                         <outlet property="endPlatform" destination="tTb-X0-NF8" id="vLk-d3-WWm"/>
                         <outlet property="mainPlatform" destination="D3h-9R-Q3b" id="gBd-Ys-hEZ"/>
                         <outlet property="startPlatform" destination="unu-of-UJq" id="KGi-4d-gJp"/>

@@ -202,7 +202,7 @@
 				TargetAttributes = {
 					D7B26FB71CD2969B00959FEB = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = BWYT76Q3DS;
+						DevelopmentTeam = U4YAT939D4;
 					};
 					D7B26FCB1CD2969B00959FEB = {
 						CreatedOnToolsVersion = 7.3;
@@ -418,7 +418,7 @@
 				INFOPLIST_FILE = "World's Hardest Game/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "JHHS.World-s-Hardest-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = JHHS.HardGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -431,7 +431,7 @@
 				INFOPLIST_FILE = "World's Hardest Game/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "JHHS.World-s-Hardest-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = JHHS.HardGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
