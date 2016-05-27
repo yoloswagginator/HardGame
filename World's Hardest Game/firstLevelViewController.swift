@@ -11,6 +11,7 @@ import UIKit
 
 class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
 
+    @IBOutlet weak var dedsLabel: UILabel!
     @IBOutlet weak var startPlatform: UIImageView!
     @IBOutlet weak var mainPlatform: UIImageView!
     @IBOutlet weak var endPlatform: UIImageView!
@@ -22,7 +23,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var yellowBlock1: UIView!
     @IBOutlet weak var yellowBlock2: UIView!
 
-    
+    var deds = 0
     var playBall = UIView()
     var collision = false
     var addBehaviors = false
@@ -253,7 +254,6 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         pushBehaviorUno.magnitude = 8
         pushBehaviorUno.angle = -3.14/2
         dynamicAnimator.addBehavior(pushBehaviorUno)
-        print("start")
         
         winLogic()
         
@@ -379,22 +379,27 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
      
         if item1.isEqual(blueBlock1) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock1) {
             performSegueWithIdentifier("loserSegue", sender: nil)
+            addDeds()
         }
         
         if item1.isEqual(blueBlock2) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock2) {
             performSegueWithIdentifier("loserSegue", sender: nil)
+            addDeds()
         }
 
         if item1.isEqual(blueBlock3) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock3) {
             performSegueWithIdentifier("loserSegue", sender: nil)
+            addDeds()
         }
 
         if item1.isEqual(blueBlock4) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock4) {
             performSegueWithIdentifier("loserSegue", sender: nil)
+            addDeds()
         }
         
         if item1.isEqual(blueBlock5) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock5) {
             performSegueWithIdentifier("loserSegue", sender: nil)
+            addDeds()
         }
 
 
@@ -412,6 +417,12 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
             allowWinning = true
         }
     }
+    
+    func addDeds() {
+        deds = deds + 1
+        dedsLabel.text = "deds: \(deds)"
+    }
+    
     
     @IBAction func backButton(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)

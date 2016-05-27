@@ -264,6 +264,12 @@
                                     <action selector="backButton:" destination="CAZ-Fk-BtM" eventType="touchUpInside" id="WP8-xf-RSK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="deds: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULM-Vx-P9z">
+                                <rect key="frame" x="433" y="28" width="159" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -275,6 +281,7 @@
                         <outlet property="blueBlock3" destination="u53-dV-wcQ" id="Yk6-6e-JIg"/>
                         <outlet property="blueBlock4" destination="58c-EI-ZlN" id="NEX-Th-P7m"/>
                         <outlet property="blueBlock5" destination="blQ-Vy-JAq" id="IYX-yk-MUF"/>
+                        <outlet property="dedsLabel" destination="ULM-Vx-P9z" id="Pmw-Kg-PD4"/>
                         <outlet property="endPlatform" destination="tTb-X0-NF8" id="vLk-d3-WWm"/>
                         <outlet property="mainPlatform" destination="D3h-9R-Q3b" id="gBd-Ys-hEZ"/>
                         <outlet property="startPlatform" destination="unu-of-UJq" id="KGi-4d-gJp"/>
@@ -315,6 +322,9 @@
                                 <state key="normal" title="Next Level">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XhX-LC-w3U" kind="show" id="Soy-e0-eOu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixj-bx-iYl">
                                 <rect key="frame" x="33" y="257" width="959" height="253"/>
@@ -335,6 +345,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoj-ao-HIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2574" y="349"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="49r-Se-TPk">
+            <objects>
+                <viewController id="XhX-LC-w3U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="opk-NC-aAz"/>
+                        <viewControllerLayoutGuide type="bottom" id="7jL-01-0Fu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L6w-2M-1eP">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAm-Sm-Vjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3670" y="349"/>
         </scene>
     </scenes>
     <resources>
