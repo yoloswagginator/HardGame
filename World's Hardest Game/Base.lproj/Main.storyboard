@@ -48,7 +48,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-H8-HaQ">
                                 <rect key="frame" x="454" y="640" width="116" height="69"/>
-                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="32"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.91574634599581151" green="0.78964288445765585" blue="0.011507217478404087" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -316,7 +316,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="looolololol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixj-bx-iYl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixj-bx-iYl">
                                 <rect key="frame" x="33" y="257" width="959" height="253"/>
                                 <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="88"/>
                                 <color key="textColor" red="0.19890764129999999" green="1" blue="0.23478125490000001" alpha="1" colorSpace="calibratedRGB"/>

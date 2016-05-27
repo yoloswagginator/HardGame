@@ -177,7 +177,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         }
         for block in blockArray {
             block.hidden = false
-            block.backgroundColor = UIColor.yellowColor()
+            block.backgroundColor = UIColor.redColor()
             view.addSubview(block)
         }
         boundaryOne = UIView(frame: CGRect(x: 16, y: 296, width: 113, height: 6))
