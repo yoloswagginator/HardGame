@@ -12,6 +12,7 @@ import UIKit
 class loserViewController: UIViewController {
     
     @IBOutlet weak var winOrLoseButton: UILabel!
+    @IBOutlet weak var nextLevelButton: UIButton!
     
     var labelText = false
 
@@ -23,6 +24,7 @@ class loserViewController: UIViewController {
         }
         else {
             winOrLoseButton.text = "You Lose"
+            nextLevelButton.hidden = true
         }
         
     }
