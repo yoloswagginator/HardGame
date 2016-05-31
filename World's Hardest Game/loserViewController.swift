@@ -14,6 +14,8 @@ class loserViewController: UIViewController {
     @IBOutlet weak var winOrLoseButton: UILabel!
     @IBOutlet weak var nextLevelButton: UIButton!
     
+    var deds2: Int = 0
+    
     var labelText = false
 
     override func viewDidLoad() {
@@ -28,6 +30,12 @@ class loserViewController: UIViewController {
             
         }
         
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let next = segue.destinationViewController as! SecondLevelViewController
+        next.deds3 = deds2
     }
 
     @IBAction func dismiss(sender: UIButton) {

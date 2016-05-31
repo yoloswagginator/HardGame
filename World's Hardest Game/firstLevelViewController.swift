@@ -238,6 +238,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         else  {
             next.labelText = false
         }
+        next.deds2 = deds
     }
     
     
@@ -420,7 +421,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     
     func addDeds() {
         deds = deds + 1
-        dedsLabel.text = "deds: \(deds)"
+        dedsLabel.text = "Deaths: \(deds)"
     }
     
     
