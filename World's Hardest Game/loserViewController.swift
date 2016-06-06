@@ -14,7 +14,7 @@ class loserViewController: UIViewController {
     @IBOutlet weak var winOrLoseButton: UILabel!
     @IBOutlet weak var nextLevelButton: UIButton!
     
-    var deds2: Int = 0
+    var sausage: Int = 0
     
     var labelText = false
 
@@ -23,6 +23,7 @@ class loserViewController: UIViewController {
 
         if labelText == true {
             winOrLoseButton.text = "You Win"
+            nextLevelButton.hidden = true
         }
         else {
             winOrLoseButton.text = "You Lose"
@@ -33,10 +34,6 @@ class loserViewController: UIViewController {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let next = segue.destinationViewController as! SecondLevelViewController
-        next.deds3 = deds2
-    }
 
     @IBAction func dismiss(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)

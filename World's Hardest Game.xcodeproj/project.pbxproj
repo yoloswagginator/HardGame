@@ -17,7 +17,6 @@
 		D7B26FC61CD2969B00959FEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B26FC41CD2969B00959FEB /* LaunchScreen.storyboard */; };
 		D7B26FD11CD2969B00959FEB /* World_s_Hardest_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B26FD01CD2969B00959FEB /* World_s_Hardest_GameTests.swift */; };
 		D7B26FDC1CD2969B00959FEB /* World_s_Hardest_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B26FDB1CD2969B00959FEB /* World_s_Hardest_GameUITests.swift */; };
-		D7B6AF771CF8DB45006029FE /* SecondLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B6AF761CF8DB45006029FE /* SecondLevelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		D7B26FD71CD2969B00959FEB /* World's Hardest GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World's Hardest GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B26FDB1CD2969B00959FEB /* World_s_Hardest_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World_s_Hardest_GameUITests.swift; sourceTree = "<group>"; };
 		D7B26FDD1CD2969B00959FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7B6AF761CF8DB45006029FE /* SecondLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondLevelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +107,6 @@
 				D7B26FBD1CD2969B00959FEB /* ViewController.swift */,
 				D714855C1CD3ECD7004C1EBF /* firstLevelViewController.swift */,
 				D7AA7C9C1CECFBE3004F243F /* loserViewController.swift */,
-				D7B6AF761CF8DB45006029FE /* SecondLevelViewController.swift */,
 				D76CBACD1CF635F900474D27 /* InstructionsViewController.swift */,
 				D7B26FBF1CD2969B00959FEB /* Main.storyboard */,
 				D7B26FC21CD2969B00959FEB /* Assets.xcassets */,
@@ -270,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7AA7C9D1CECFBE3004F243F /* loserViewController.swift in Sources */,
-				D7B6AF771CF8DB45006029FE /* SecondLevelViewController.swift in Sources */,
 				D7B26FBE1CD2969B00959FEB /* ViewController.swift in Sources */,
 				D714855D1CD3ECD7004C1EBF /* firstLevelViewController.swift in Sources */,
 				D7B26FBC1CD2969B00959FEB /* AppDelegate.swift in Sources */,

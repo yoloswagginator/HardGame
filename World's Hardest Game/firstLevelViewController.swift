@@ -23,7 +23,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var yellowBlock1: UIView!
     @IBOutlet weak var yellowBlock2: UIView!
 
-    var deds = 0
+    var pepperoni = 0
     var playBall = UIView()
     var collision = false
     var addBehaviors = false
@@ -238,7 +238,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         else  {
             next.labelText = false
         }
-        next.deds2 = deds
+        next.sausage = pepperoni
     }
     
     
@@ -380,27 +380,27 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
      
         if item1.isEqual(blueBlock1) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock1) {
             performSegueWithIdentifier("loserSegue", sender: nil)
-            addDeds()
+            addPepperoniToHardGamePizza()
         }
         
         if item1.isEqual(blueBlock2) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock2) {
             performSegueWithIdentifier("loserSegue", sender: nil)
-            addDeds()
+            addPepperoniToHardGamePizza()
         }
 
         if item1.isEqual(blueBlock3) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock3) {
             performSegueWithIdentifier("loserSegue", sender: nil)
-            addDeds()
+            addPepperoniToHardGamePizza()
         }
 
         if item1.isEqual(blueBlock4) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock4) {
             performSegueWithIdentifier("loserSegue", sender: nil)
-            addDeds()
+            addPepperoniToHardGamePizza()
         }
         
         if item1.isEqual(blueBlock5) && item2.isEqual(playBall) || item1.isEqual(playBall) && item2.isEqual(blueBlock5) {
             performSegueWithIdentifier("loserSegue", sender: nil)
-            addDeds()
+            addPepperoniToHardGamePizza()
         }
 
 
@@ -411,7 +411,7 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
             winArray.append(block)
             block.hidden = true
             cb2.removeItem(block)
-            
+                
             }
         }
         if winArray.count == 2 {
@@ -419,9 +419,9 @@ class firstLevelViewController: UIViewController, UICollisionBehaviorDelegate {
         }
     }
     
-    func addDeds() {
-        deds = deds + 1
-        dedsLabel.text = "Deaths: \(deds)"
+    func addPepperoniToHardGamePizza() {
+        pepperoni = pepperoni + 1
+        dedsLabel.text = "Deaths: \(pepperoni)"
     }
     
     
